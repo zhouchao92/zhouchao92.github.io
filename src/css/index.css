@@ -1,0 +1,52 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+.position-center {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.talent-item {
+  padding-inline-start: 0px;
+}
+
+.talent-item>li {
+  list-style-type: none;
+  /* 垂直居中 */
+  display: flex;
+  align-items: center;
+
+  /* 间距 */
+  padding: 2px 0;
+}
+
+/* 微信 */
+.wechat-image {
+  width: 130px;
+  height: 130px;
+  position: fixed;
+  top: 4%;
+  right: 2%;
+  z-index: 100;
+}
+
+.sub-indent-30 {
+  padding-inline-start: 30px;
+}
+
+/* 反转文字 */
+.reverse-word {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+/* 技术架构-标签 */
+.technology-label {
+  margin: 0 4px;
+}
+
+/* 时间戳 */
+.el-timeline-item__timestamp {
+  font-size: 16px;
+}
