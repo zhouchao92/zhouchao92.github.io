@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <title>周超 | 个人简历</title>
   <link rel="shortcut icon" href="/src/pic/avatar.jpg" type="image/x-icon" />
 </head>
@@ -20,9 +23,13 @@
   <!-- css样式 -->
   <link rel="stylesheet" href="/src/css/index.css">
 
+  <!-- jquery -->
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
   <div id="app">
 
-    <div style="position: relative;">
+    <div style="position: relative;" id="myWechatImage">
       <el-image src="/src/pic/wechat-qrcode.jpg" fit="cover" class="wechat-image"
         :preview-src-list="wechatImage"></el-image>
     </div>
@@ -30,7 +37,7 @@
 
     <!-- 基本信息 -->
     <div class="position-center">
-      <el-divider content-position="center">
+      <el-divider content-position="left">
         <h4>基本信息</h4>
       </el-divider>
 
@@ -38,8 +45,10 @@
         <el-timeline-item>
           <el-card>
             <h4>周超</h4>
-            <i class="el-icon-phone-outline "><span class="reverse-word">&nbsp;27209890431&nbsp;
-              </span></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="el-icon-phone-outline "><a style="text-decoration: none;color: #303133;"
+                href="tel:+8613409890272">
+                <span class="reverse-word">&nbsp;27209890431&nbsp;
+                </span></a></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <i class="el-icon-message"><a style="text-decoration: none;color: #303133;" href="mailto:1178605721@qq.com">
                 <span class="reverse-word">&nbsp;moc.qq@1275068711&nbsp;</span> </a></i>
             <br />
@@ -269,16 +278,6 @@
       }
     },
     methods: {
-      // 回到顶部
-      scrollToTop() {
-        let header = document.getElementById("app");
-        if (header) {
-          header.scrollIntoView({
-            block: "start",
-            behavior: "smooth",
-          });
-        }
-      }
     },
     mounted() {
 
@@ -287,6 +286,13 @@
   var Ctor = Vue.extend(Main)
   new Ctor().$mount('#app')
 
+
+  if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+    // 当前设备是移动设备
+    $('#myWechatImage').css('display', 'none');
+    // var wechatImage = document.getElementById('myWechatImage');
+    // wechatImage.style.display = 'none';
+  };
 </script>
 
 <style>

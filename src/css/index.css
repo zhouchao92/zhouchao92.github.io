@@ -2,9 +2,44 @@ body {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
 
-.position-center {
-  padding-left: 20%;
-  padding-right: 20%;
+
+/* <375px */
+/* @media screen and (max-width:375px) {
+  #app {
+    width: 100%;
+  }
+} */
+
+/* >=375px and <450px */
+/* @media screen and (min-width:375px) and (max-width:450) {
+  #app {
+    width: 100%;
+  }
+} */
+
+/* <600px */
+@media screen and (max-width:600px) {
+  #app {
+    width: 100%;
+  }
+}
+
+/* >=600px and <900px */
+@media screen and (min-width:600px) and (max-width:900) {
+  #app {
+    /* width: 100%; */
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+/* >=900px */
+@media screen and (min-width:900px) {
+  #app {
+    margin-left: 18%;
+    margin-right: 18%;
+    /* width: 100%; */
+  }
 }
 
 .talent-item {
@@ -26,8 +61,8 @@ body {
   width: 130px;
   height: 130px;
   position: fixed;
-  top: 4%;
-  right: 2%;
+  top: 40px;
+  right: 20px;
   z-index: 100;
 }
 
