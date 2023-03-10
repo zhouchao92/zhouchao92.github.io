@@ -58,10 +58,10 @@ body {
 
 /* 微信 */
 .wechat-image {
-  width: 130px;
-  height: 130px;
+  width: 80px;
+  height: 80px;
   position: fixed;
-  top: 40px;
+  bottom: 20px;
   right: 20px;
   z-index: 100;
 }
@@ -78,7 +78,7 @@ body {
 
 /* 技术架构-标签 */
 .technology-label {
-  margin: 0 4px;
+  margin: 2px 4px;
 }
 
 /* 时间戳 */

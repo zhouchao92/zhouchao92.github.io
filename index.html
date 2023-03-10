@@ -247,7 +247,6 @@
             percentage: 100,
             status: 'success',
             text: '熟练掌握 Spring、Spring MVC、Spring Boot、MyBatis、Spring Cloud 等主流技术框架',
-
           },
           {
             percentage: 100,
@@ -287,11 +286,9 @@
   new Ctor().$mount('#app')
 
 
-  if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-    // 当前设备是移动设备
+  if (/Mobi|Android|iPhone/i.test(navigator.userAgent) || window.screen.width < 900) {
+    // 当前设备是移动设备或屏幕宽度小于900px
     $('#myWechatImage').css('display', 'none');
-    // var wechatImage = document.getElementById('myWechatImage');
-    // wechatImage.style.display = 'none';
   };
 </script>
 
