@@ -7,11 +7,11 @@
 
   <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
 
-  <title>周超 | 个人简历</title>
+  <title>周超</title>
   <link rel="shortcut icon" href="/static/avatar.jpg" type="image/x-icon" />
 
   <!-- vue2 -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://unpkg.com/vue@2"></script>
   <!-- 引入样式 -->
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <!-- 引入组件库 -->
@@ -21,22 +21,24 @@
   <link rel="stylesheet" href="/src/css/index.css">
 
   <!-- jquery -->
-  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://unpkg.com/jquery@3.6.4/dist/jquery.js"></script>
 
   <!-- 路由 -->
   <script src="https://unpkg.com/vue-router@3"></script>
   <script src="https://unpkg.com/http-vue-loader@1.4.2/src/httpVueLoader.js"></script>
+
+  <!-- head信息 -->
+  <script src="https://unpkg.com/vue-meta/dist/vue-meta.js"></script>
 
   <script src="/src/main.js" type="module"></script>
 </head>
 
 <body>
   <div id="app">
+    <!-- <dashboard class="dashboard-box"></dashboard> -->
     <router-view></router-view>
   </div>
 
-  <script>
-  </script>
 </body>
 
 </html>

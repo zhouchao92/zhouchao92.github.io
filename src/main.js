@@ -1,9 +1,15 @@
 import router from '/src/router/index.js';
 
 Vue.use(httpVueLoader);
-Vue.use(VueRouter)
+Vue.use(VueMeta, {
+  refreshOnceOnNavigation: true
+});
+Vue.use(VueRouter);
 
 new Vue({
   el: '#app',
-  router
-})
+  router,
+  components: {
+    'dashboard': httpVueLoader('/src/pages/dashboard.vue')
+  }
+});
