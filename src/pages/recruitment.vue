@@ -1,6 +1,6 @@
 <template>
-<div class="campus-recruitment-box">
-  <div class="campus-recruitment-index">
+<div class="recruitment-box">
+  <div class="recruitment-index">
 
     <el-menu :default-active="activteMarkdownIndex" mode="vertical" active-text-color="#ffd04b" @select="handMarkdownIndexChange">
       <el-menu-item :index='filename' v-for="(filename,index) in filenames" :key="index">{{filename}}</el-menu-item>
@@ -8,7 +8,7 @@
 
   </div>
 
-  <markdownhtml class="campus-recruitment-content" :markdown-path="markdownPath">
+  <markdownhtml class="recruitment-content" :markdown-path="markdownPath">
 
   </markdownhtml>
 </div>
@@ -19,7 +19,7 @@ const markdownPathPrefix = '/src/recruitment/';
 const markdownPathSuffix = '.md';
 module.exports = {
   metaInfo: {
-    title: '周超 | 校招'
+    title: '周超 | 面试'
   },
   components: {
     markdownhtml: httpVueLoader('/src/components/markdownHtml.vue'),

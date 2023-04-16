@@ -13,8 +13,8 @@ const router = new VueRouter({
       component: httpVueLoader('/src/pages/resume.vue')
     },
     {
-      path: '/campusRecruitment',
-      component: httpVueLoader('/src/pages/campusRecruitment.vue')
+      path: '/recruitment',
+      component: httpVueLoader('/src/pages/recruitment.vue')
     }
   ],
   mode: 'hash'
