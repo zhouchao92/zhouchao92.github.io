@@ -26,7 +26,7 @@ module.exports = {
   },
   data() {
     return {
-      filenames: [],
+      filenames: ['中国移动', '中国联通'],
       markdownPath: '',
       activteMarkdownIndex: ''
     }
@@ -71,10 +71,11 @@ module.exports = {
     }
   },
   mounted() {
-    this.filenames = this.loadFilenames();
-    if (this.filenames.length > 0) {
-      this.changeMarkdownIndex(this.filenames[0]);
-    }
+    // this.filenames = this.loadFilenames();
+    // if (this.filenames.length > 0) {
+    // this.changeMarkdownIndex(this.filenames[0]);
+    // }
+    this.changeMarkdownIndex(this.filenames[0]);
   },
 }
 </script>
