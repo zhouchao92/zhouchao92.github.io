@@ -1,15 +1,15 @@
 <template>
 <div class="recruitment-box">
   <div class="recruitment-index">
-
-    <el-menu :default-active="activteMarkdownIndex" mode="vertical" active-text-color="#ffd04b" @select="handMarkdownIndexChange">
+  <el-tabs v-model="activteMarkdownIndex" @tab-click="handleClick">
+    <el-tab-pane :index='filename' v-for="(filename,index) in filenames" :key="index" :label="filename" :name="filename"></el-tab-pane>
+  </el-tabs>
+    <!-- <el-menu :default-active="activteMarkdownIndex" mode="horizontal"  @select="handMarkdownIndexChange">
       <el-menu-item :index='filename' v-for="(filename,index) in filenames" :key="index">{{filename}}</el-menu-item>
-    </el-menu>
-
+    </el-menu> -->
   </div>
 
   <markdownhtml class="recruitment-content" :markdown-path="markdownPath">
-
   </markdownhtml>
 </div>
 </template>
@@ -32,6 +32,9 @@ module.exports = {
     }
   },
   methods: {
+    handleClick(tab, event){
+      this.changeMarkdownIndex(tab.$attrs.index);      
+    },
     loadFilenames() {
       var filenames = [];
       var xmlhttp;
@@ -61,9 +64,6 @@ module.exports = {
       xmlhttp.send();
 
       return filenames;
-    },
-    handMarkdownIndexChange(key, keyPath) {
-      this.changeMarkdownIndex(key);
     },
     changeMarkdownIndex(index) {
       this.activteMarkdownIndex = index;

@@ -1,11 +1,11 @@
-.recruitment-box {}
+.recruitment-box {
+  position: relative;
+}
 
 .recruitment-index {
-  position: fixed;
-  top: 100px;
-  left: 10px;
-  width: 16%;
-  max-height: 300px;
+  position: sticky;
+  top: 0;
+  background: #fff;
 }
 
 .recruitment-content {
@@ -13,4 +13,5 @@
   border: 1px solid #EBEEF5;
   padding: 4px 8px;
   min-height: 600px;
+  margin-top: 20px;
 }
