@@ -34,11 +34,16 @@ module.exports = {
   methods: {
     loadFilenames() {
       var filenames = [];
-      $.ajax({
-        async: false,
-        url: "/src/recruitment",
-        success: function (data) {
-          $(data).find("a:contains(.md)").each(function () {
+      var xmlhttp;
+      if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+      } else {
+        xmlhttp = new ActiveXObject('Microsoft.XMLHttp');
+      }
+
+      xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          $(xmlhttp.responseText).find("a:contains(.md)").each(function () {
             let tmp = $(this).attr("href");
             let idx = tmp.lastIndexOf('/');
             tmp = tmp.slice(idx + 1, tmp.length - 3);
@@ -49,7 +54,12 @@ module.exports = {
             return parseInt(x) - parseInt(y);
           });
         }
-      });
+      }
+
+      // 向服务器发送请求
+      xmlhttp.open('GET', '/src/recruitment', false);
+      xmlhttp.send();
+
       return filenames;
     },
     handMarkdownIndexChange(key, keyPath) {
