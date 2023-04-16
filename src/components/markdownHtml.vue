@@ -9,9 +9,9 @@ module.exports = {
     markdownPath: {
       type: String,
       required: true,
-      validator: function (value) {
-        return value.endsWith('.md')
-      }
+      // validator: function (value) {
+      //   return value.endsWith('.md')
+      // }
     },
   },
   data() {

@@ -62,7 +62,9 @@ module.exports = {
   },
   mounted() {
     this.filenames = this.loadFilenames();
-    this.changeMarkdownIndex(this.filenames[0]);
+    if (this.filenames.length > 0) {
+      this.changeMarkdownIndex(this.filenames[0]);
+    }
   },
 }
 </script>
