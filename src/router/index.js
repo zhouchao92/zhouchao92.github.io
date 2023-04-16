@@ -11,6 +11,10 @@ const router = new VueRouter({
     {
       path: '/resume',
       component: httpVueLoader('/src/pages/resume.vue')
+    },
+    {
+      path: '/campusRecruitment',
+      component: httpVueLoader('/src/pages/campusRecruitment.vue')
     }
   ],
   mode: 'hash'

@@ -1,0 +1,16 @@
+.campus-recruitment-box {}
+
+.campus-recruitment-index {
+  position: fixed;
+  top: 100px;
+  left: 10px;
+  width: 16%;
+  max-height: 300px;
+}
+
+.campus-recruitment-content {
+  border-radius: 4px;
+  border: 1px solid #EBEEF5;
+  padding: 4px 8px;
+  min-height: 600px;
+}

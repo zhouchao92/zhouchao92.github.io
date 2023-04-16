@@ -30,12 +30,19 @@
   <!-- head信息 -->
   <script src="https://unpkg.com/vue-meta/dist/vue-meta.js"></script>
 
+  <!-- markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!--代码块高亮插件-->
+  <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+  <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+
   <script src="/src/main.js" type="module"></script>
 </head>
 
 <body>
   <div id="app">
-    <!-- <dashboard class="dashboard-box"></dashboard> -->
+    <dashboard class="dashboard-box"></dashboard>
     <router-view></router-view>
   </div>
 
