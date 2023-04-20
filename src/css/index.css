@@ -1,3 +1,4 @@
+@import 'resume.css';
 @import 'recruitment.css';
 
 body {
@@ -45,30 +46,6 @@ body {
   }
 }
 
-.talent-item {
-  padding-inline-start: 0px;
-}
-
-.talent-item>li {
-  list-style-type: none;
-  /* 垂直居中 */
-  display: flex;
-  align-items: center;
-
-  /* 间距 */
-  padding: 2px 0;
-}
-
-/* 微信 */
-.wechat-image {
-  width: 80px;
-  height: 80px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-}
-
 .sub-indent-30 {
   padding-inline-start: 30px;
 }
@@ -77,20 +54,6 @@ body {
 .reverse-word {
   direction: rtl;
   unicode-bidi: bidi-override;
-}
-
-/* 技术架构-标签 */
-.technology-label {
-  margin: 2px 4px;
-}
-
-/* 时间戳 */
-.el-timeline-item__timestamp {
-  font-size: 16px;
-}
-
-.dashboard-box {
-  margin-bottom: 40px;
 }
 
 .trim-underline {

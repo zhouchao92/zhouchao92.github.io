@@ -1,0 +1,56 @@
+.resume-box {
+  margin-top: 20px;
+}
+
+#resumeContent {
+  padding-top: 20px;
+}
+
+.talent-item {
+  padding-inline-start: 0px;
+}
+
+.talent-item>li {
+  list-style-type: none;
+  /* 垂直居中 */
+  display: flex;
+  align-items: center;
+
+  /* 间距 */
+  padding: 2px 0;
+}
+
+/* 微信 */
+#myWechatImage {
+  position: relative;
+}
+
+/* 微信 */
+.wechat-image {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+/* 技术架构-标签 */
+.technology-label {
+  margin: 2px 4px;
+}
+
+/* 时间戳 */
+.el-timeline-item__timestamp {
+  font-size: 16px;
+}
+
+#exportResume {
+  position: relative;
+}
+
+#exportResume .el-link-download {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+}
