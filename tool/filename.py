@@ -3,7 +3,6 @@
 """
 
 import os
-from re import S
 
 
 def listfilenames(path):
