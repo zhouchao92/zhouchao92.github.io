@@ -15,7 +15,7 @@
 </template>
 
 <script>
-const markdownPathPrefix = '/src/recruitment/';
+const markdownPathPrefix = '/static/recruitment/';
 const markdownPathSuffix = '.md';
 module.exports = {
   metaInfo: {
