@@ -5,7 +5,7 @@
   </div>
 
   <div id="exportResume">
-    <el-link class="el-link-download" href="/static/周超_Java开发工程师.pdf" download="周超_Java开发工程师.pdf" icon="el-icon-download" :underline="false">下载</el-link>
+    <el-link class="el-link-download" href="/static/attachment/周超_Java开发工程师.pdf" download="周超_Java开发工程师.pdf" icon="el-icon-download" :underline="false">下载</el-link>
   </div>
 
   <div id="resumeContent">
