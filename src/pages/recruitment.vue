@@ -26,14 +26,14 @@ module.exports = {
   },
   data() {
     return {
-      filenames: ['中国移动', '中国联通'],
+      filenames: [],
       markdownPath: '',
       activteMarkdownIndex: ''
     }
   },
   methods: {
-    handleClick(tab, event){
-      this.changeMarkdownIndex(tab.$attrs.index);      
+    handleClick(tab, event) {
+      this.changeMarkdownIndex(tab.$attrs.index);
     },
     changeMarkdownIndex(index) {
       this.activteMarkdownIndex = index;
@@ -41,7 +41,10 @@ module.exports = {
     }
   },
   mounted() {
-    this.changeMarkdownIndex(this.filenames[0]);
+    this.filenames = this.markdownFilenmaes.recruitment;
+    if (this.filenames.length > 0) {
+      this.changeMarkdownIndex(this.filenames[0]);
+    }
   },
 }
 </script>

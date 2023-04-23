@@ -1,5 +1,6 @@
 import router from '/src/router/index.js';
 import * as markdownUtil from '/src/util/markdownUtil.js';
+import * as markdownFilenmaes from '/src/constant/filenames.js'
 
 Vue.use(httpVueLoader);
 Vue.use(VueMeta, {
@@ -9,6 +10,7 @@ Vue.use(VueRouter);
 
 
 Vue.prototype.markdownUtil = markdownUtil;
+Vue.prototype.markdownFilenmaes = markdownFilenmaes;
 
 new Vue({
   el: '#app',
