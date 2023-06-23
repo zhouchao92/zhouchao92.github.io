@@ -60,6 +60,33 @@
         <h4>工作经历</h4>
       </el-divider>
       <el-timeline>
+        <el-timeline-item timestamp="2023/04/24 - " placement="top">
+        <el-card>
+            <h4>中通服软件科技有限公司（武汉） &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java开发工程师</h4>
+            <p>
+              <el-tag type="info" size="small">主营业务</el-tag>
+            </p>
+            <p>支撑湖北省内告警子中心业务系统，涵盖告警采集、标准化、派单等过程。</p>
+
+            <div>
+              <p>
+                <el-tag type="primary" size="small">工作内容</el-tag>
+              </p>
+              <ul class="sub-indent-30">
+                <li>告警数据采集 Kettle 任务开发，功能业务代码开发，对外接口开发与联调；</li>
+                <li>协助项目版本发布和功能验证工作；</li>
+                <li>解决生产环境的BUG，协助项目经理完成功能设计和版本迭代。</li>
+              </ul>
+            </div>
+
+            <p>
+              <el-tag type="success" size="small">工作成果</el-tag>
+            </p>
+            <p>
+              动环专业获取告警数据接口开发，告警延时入库监控、动环采集器心跳异常监控，集团两级协同告警上报与网元数据统计上报，每小时告警统计并根据基线值和阈值上下限生成软告警。
+            </p>
+          </el-card>
+        </el-timeline-item>
         <el-timeline-item timestamp="2022/03/17 - 2022/09/05" placement="top">
           <el-card>
             <h4>深圳市云积分科技有限公司（武汉） &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java开发工程师</h4>
