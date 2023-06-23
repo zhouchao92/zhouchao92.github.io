@@ -60,7 +60,7 @@
         <h4>工作经历</h4>
       </el-divider>
       <el-timeline>
-        <el-timeline-item timestamp="2023/04/24 - " placement="top">
+        <el-timeline-item timestamp="2023/04/24 - 至今" placement="top">
         <el-card>
             <h4>中通服软件科技有限公司（武汉） &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java开发工程师</h4>
             <p>
@@ -83,7 +83,8 @@
               <el-tag type="success" size="small">工作成果</el-tag>
             </p>
             <p>
-              动环专业获取告警数据接口开发，告警延时入库监控、动环采集器心跳异常监控，集团两级协同告警上报与网元数据统计上报，每小时告警统计并根据基线值和阈值上下限生成软告警。
+              告警设备数据采集入库，动环专业获取告警数据接口开发，告警延时入库监控、动环采集器心跳异常监控，
+              集团两级协同告警上报与网元数据统计上报，每小时告警统计并根据基线值和阈值上下限生成软告警。
             </p>
           </el-card>
         </el-timeline-item>
@@ -111,7 +112,7 @@
               <el-tag type="success" size="small">工作成果</el-tag>
             </p>
             <p>
-              基本完成云积分与有赞数据中心对接天猫会员通（方案对接、代码开发和联调，未上线），完成唯品会会员通接入珀莱雅品牌和抖音会员通接入悦诗风吟美妆旗舰店品牌，协助完成欧莱雅旗下品牌（3CE、LRP）会员通接入。解决联合利华、欧莱雅、美素佳儿、美赞臣等多个品牌会员通线上数据问题。
+              基本完成云积分与有赞数据中心对接天猫会员通（方案对接、代码开发和联调），完成唯品会会员通接入珀莱雅品牌和抖音会员通接入悦诗风吟美妆旗舰店品牌，协助完成欧莱雅旗下品牌（3CE、LRP）会员通接入。解决联合利华、欧莱雅、美素佳儿、美赞臣等多个品牌会员通线上数据问题。
             </p>
           </el-card>
         </el-timeline-item>
@@ -149,6 +150,23 @@
       <el-divider content-position="left">
         <h4>项目经历</h4>
       </el-divider>
+      <el-timeline>
+        <el-timeline-item timestamp="2023/04/24 - 至今" placement="top">
+          <el-card>
+            <h4>湖北电信告警子中心系统</h4>
+            <p>
+              <el-tag class="technology-label" v-for="item in enbrandsTechnology" :key="item.label" type="warning" size="small">{{item.label}}</el-tag>
+            </p>
+            <p><b>项目描述：系统基于采集器程序从华为、中兴、烽火等网管处获取设备异常信息，先经过对数据进行预处理，
+              再经过 Flink 程序对告警数据进行标准化、割接等规则匹配，对其进行打标，符合派单条件的发出工单至运营管理人员。</b></p>
+            <div>
+              <b>工作职责：</b>
+              <ol class="sub-indent-30">
+                <!-- TODO：工作职责 -->
+              </ol>
+            </div>
+          </el-card>
+        </el-timeline-item>
       <el-timeline>
         <el-timeline-item timestamp="2022/03/17 - 2022/09/05" placement="top">
           <el-card>
