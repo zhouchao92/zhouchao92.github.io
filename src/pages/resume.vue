@@ -157,17 +157,18 @@
             <p>
               <el-tag class="technology-label" v-for="item in enbrandsTechnology" :key="item.label" type="warning" size="small">{{item.label}}</el-tag>
             </p>
-            <p><b>项目描述：系统基于采集器程序从华为、中兴、烽火等网管处获取设备异常信息，先经过对数据进行预处理，
-              再经过 Flink 程序对告警数据进行标准化、割接等规则匹配，对其进行打标，符合派单条件的发出工单至运营管理人员。</b></p>
+            <p><b>项目描述：系统基于采集器程序从华为、中兴、烽火等网管处获取设备异常信息，先经过 Flink 程序对告警数据进行标准化、割接等规则匹配，对其进行打标，
+              再对数据进行预处理，符合派单条件的调用第三方综调系统生成工单，送至运营岗位处理。</b></p>
             <div>
               <b>工作职责：</b>
               <ol class="sub-indent-30">
-                <!-- TODO：工作职责 -->
+                <li>实现 kettle 对网络设备的端口信息、板卡信息、电路信息等资源文件进行解析入库；</li>
+                <li>通过 MQ + nacos配置文件的形式实现告警数据实现转发功能；</li>
+                <li>定时任务实现告警数据的入库情况监控，监测网管连接的心跳情况，基于7日告警量生成告警基准值，并以echart展示。</li>
               </ol>
             </div>
           </el-card>
         </el-timeline-item>
-      <el-timeline>
         <el-timeline-item timestamp="2022/03/17 - 2022/09/05" placement="top">
           <el-card>
             <h4>云积分电商会员通系统</h4>
@@ -234,7 +235,7 @@
       <el-timeline style="text-align:left;font-size: 16px;">
         <el-timeline-item>
           <el-card>
-            <p>熟悉 SaaS 系统和分布式电商会员系统研发，有较强的责任心，具备良好的沟通能力和团队协作精神。</p>
+            <p>熟悉 SaaS 系统、分布式电商会员系统和告警子中心运营系统研发，有较强的责任心，具备良好的沟通能力和团队协作精神。</p>
           </el-card>
         </el-timeline-item>
       </el-timeline>
