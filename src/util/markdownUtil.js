@@ -14,29 +14,19 @@ function showMarkdown(filepath) {
   xmlhttp.onreadystatechange = function () {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
-      // marked.setOptions({
-      //   renderer: new marked.Renderer(),
-      //   gfm: true,
-      //   tables: true,
-      //   breaks: false,
-      //   pedantic: false,
-      //   sanitize: false,
-      //   smartLists: true,
-      //   smartypants: false,
-      //   highlight: function (code) {
-      //     return hljs.highlightAuto(code).value;
-      //   }
-      // });
-
-      // that.markdownContent = marked.parse(xmlhttp.responseText);
-
-      // document.querySelectorAll('table').forEach(function (el) {
-      //   el.setAttribute('border', '1')
-      // })
-      // document.querySelectorAll('code').forEach(function (el) {
-      //   //缺少这个类代码块没有背景
-      //   el.classList.add('hljs');
-      // })
+      marked.setOptions({
+        renderer: new marked.Renderer(),
+        gfm: true,
+        tables: true,
+        breaks: false,
+        pedantic: false,
+        sanitize: false,
+        smartLists: true,
+        smartypants: false,
+        highlight: function (code) {
+          return hljs.highlightAuto(code).value;
+        }
+      });
 
       html = marked.marked(xmlhttp.responseText);
     }
