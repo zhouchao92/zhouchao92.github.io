@@ -20,20 +20,21 @@ const oscResume = {
 	projectName: "湖北电信告警子中心系统",
 	projectDesc: "系统基于采集器程序从华为、中兴、烽火等网管处获取设备异常信息，先经过 Flink 程序对告警数据进行标准化、割接等规则匹配，对其进行打标，再对数据进行预处理，符合派单条件的调用第三方综调系统生成工单，送至运营岗位处理。",
 	projectDuty: [
-		"实现 kettle 对网元的设备信息、端口信息、板卡信息、电路信息等资源文件进行解析入库；",
+		"实现 Kettle 对网元的设备信息、端口信息、板卡信息、电路信息等资源文件进行解析入库；",
 		"通过 MQ + nacos配置文件的形式实现告警数据实时转发功能，优化MQ通讯方式的告警采集程序；",
-		"实现告警数据的入库情况监控，监测动环网管连接的心跳情况自动任务，生成各网管告警基线数据。"
+		"实现告警数据的入库情况监控，监测动环网管连接的心跳情况自动任务，生成各网管告警基线数据；",
+		"基于 PromQL 实现从 Promethues 获取容器 POD 的各项核心指标信息完成微服务监控，基于指标阈值生成软告警。"
 	],
 	technology: [
-		"Spring Cloud Alibaba", "Spring Boot", "MyBatisPlus", "PostgreSQL", "Redis", "Kafka", "RocketMQ", "XXL-job", "Zeebe"
+		"Spring Cloud Alibaba", "Spring Boot", "MyBatisPlus", "PostgreSQL", "Redis", "Kafka", "RocketMQ", "XXL-JOB", "Zeebe"
 	],
 	company: "中通服软件科技有限公司（武汉）",
 	position: "Java开发工程师",
 	business: "支撑湖北省内告警子中心业务系统，涵盖告警采集、标准化、预处理、派单等过程。",
 	jobContent: [
-		"告警数据采集 Kettle 任务开发，功能业务代码开发，对外接口开发与联调；",
-		"告警相关流程编排场景设计与功能开发，优化告警Kafka和RocketMQ通信方式采集与解析程序；",
-		"解决生产环境的BUG，完成项目版本发布和功能验证工作。"
+		"告警数据采集 Kettle 任务开发，功能业务代码开发，对外接口开发与联调工作；",
+		"告警相关流程编排场景设计与功能开发，优化告警 Kafka 和 RocketMQ 通信方式采集与解析程序；",
+		"解决生产环境的 BUG，优化系统代码，完成项目版本发布和功能验证工作。"
 	],
 	achievement: "告警设备数据采集入库，动环专业获取告警数据接口开发，告警延时入库监控、动环采集器心跳异常监控，集团两级协同告警上报与网元数据统计上报，每小时告警统计并根据基线值和阈值上下限生成软告警。"
 };
@@ -49,7 +50,7 @@ const enbrandsResume = {
 		"结合日志文件排查新老会员通服务线上问题，优化会员通项目业务代码。"
 	],
 	technology: [
-		"Spring Cloud Alibaba", "Spring Boot", "MyBatis", "MySQL", "Redis", "Kafka", "XXL-job"
+		"Spring Cloud Alibaba", "Spring Boot", "MyBatis", "MySQL", "Redis", "Kafka", "XXL-JOB"
 	],
 	company: "深圳市云积分科技有限公司（武汉） ",
 	position: "Java开发工程师",
@@ -97,10 +98,10 @@ const specialTalent = [
 		percentage: 100, status: 'success', text: '熟练掌握 MySQL 数据库以及锁、索引和事务相关原理，熟悉 MySQL 调优',
 	},
 	{
-		percentage: 75, status: '', text: '熟悉 Redis 数据库的使用，掌握 Redis 的数据结构、分布式锁的原理以及 Redis 的应用场景',
+		percentage: 75, status: '', text: '熟悉 Redis 缓存数据库的使用，掌握 Redis 的数据结构、分布式锁的原理以及 Redis 的应用场景',
 	},
 	{
-		percentage: 75, status: '', text: '熟悉 Kafka 消息队列、XXL-job 分布式任务调度框架、Easy Excel 等中间件技术',
+		percentage: 75, status: '', text: '熟悉 Kafka 消息队列、XXL-JOB 分布式任务调度框架、Easy Excel 等中间件技术',
 	},
 	{
 		percentage: 75, status: '', text: '熟悉类加载机制、内存模型、垃圾回收机制、垃圾回收算法等 JVM 基本原理，了解 JVM 调优',
