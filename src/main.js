@@ -18,6 +18,6 @@ new Vue({
   el: '#app',
   router,
   components: {
-    'dashboard': httpVueLoader('/src/pages/dashboard.vue')
+    'app': httpVueLoader('/src/App.vue'),
   }
 });
