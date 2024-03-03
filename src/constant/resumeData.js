@@ -6,13 +6,15 @@ const personInfo = {
 	city: "湖北省黄冈市",
 	expect: "Java开发工程师",
 	workTime: Math.round((new Date() - new Date("2020-12-01")) / 1000 / 60 / 60 / 24 / 365) + "年工作经验",
-	education: {
-		timestamp: "2017/09/01 - 2021/06/30",
-		university: "湖北经济学院",
-		specialty: "电子信息工程专业",
-		level: "本科",
-		certificates: ["大学英语四级"]
-	}
+	educations: [
+		{
+			timestamp: "2017/09/01 - 2021/06/30",
+			university: "湖北经济学院",
+			specialty: "电子信息工程专业",
+			level: "本科",
+			certificates: ["大学英语四级"]
+		}
+	]
 };
 
 const oscResume = {

@@ -116,11 +116,11 @@
         <h4>教育经历</h4>
       </el-divider>
       <el-timeline>
-        <el-timeline-item :timestamp="resumeData.personInfo.education.timestamp" placement="top">
+        <el-timeline-item :index='education' v-for="(education,index) in resumeData.personInfo.educations" :key="index" :name="education" placement="top" :timestamp="education.timestamp">
           <el-card>
-            <h4>{{resumeData.personInfo.education.university}} - {{resumeData.personInfo.education.specialty}} - {{resumeData.personInfo.education.level}}</h4>
+            <h4>{{education.university}} - {{education.specialty}} - {{education.level}}</h4>
             <p>
-              <el-tag type="success" size="small" v-for="certificate in resumeData.personInfo.education.certificates" :key="certificate" >{{certificate}}</el-tag>
+              <el-tag type="success" size="small" v-for="certificate in education.certificates" :key="certificate" >{{certificate}}</el-tag>
             </p>
           </el-card>
         </el-timeline-item>
