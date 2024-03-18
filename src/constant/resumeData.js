@@ -23,9 +23,9 @@ const oscResume = {
 	projectDesc: "系统基于采集器程序从华为、中兴、烽火等网管处获取设备异常信息，先经过 Flink 程序对告警数据进行标准化、割接等规则匹配，对其进行打标，再对数据进行预处理，符合派单条件的调用第三方综调系统生成工单，送至运营岗位处理。",
 	projectDuty: [
 		"实现 Kettle 对网元的设备信息、端口信息、板卡信息、电路信息等资源文件进行解析入库；",
-		"通过 MQ + nacos配置文件的形式实现告警数据实时转发功能，优化MQ通讯方式的告警采集程序；",
+		"采用 MQ + nacos 配置文件的形式实现告警数据实时转发功能，优化消息队列通讯方式的告警采集程序；",
 		"实现告警数据的入库情况监控，监测动环网管连接的心跳情况自动任务，生成各网管告警基线数据；",
-		"基于 PromQL 实现从 Promethues 获取容器 POD 的各项核心指标信息完成微服务监控，基于指标阈值生成软告警。"
+		"基于 Promethues 获取容器 POD 的各项核心指标信息完成端到端微服务性能指标监控。"
 	],
 	technology: [
 		"Spring Cloud Alibaba", "Spring Boot", "MyBatisPlus", "PostgreSQL", "Redis", "Kafka", "RocketMQ", "XXL-JOB", "Zeebe"
@@ -103,17 +103,17 @@ const specialTalent = [
 		percentage: 75, status: '', text: '熟悉 Redis 缓存数据库的使用，掌握 Redis 的数据结构、分布式锁的原理以及 Redis 的应用场景',
 	},
 	{
-		percentage: 75, status: '', text: '熟悉 Kafka 消息队列、XXL-JOB 分布式任务调度框架、Easy Excel 等中间件技术',
+		percentage: 75, status: '', text: '熟悉 Kafka、RocketMQ 消息队列、XXL-JOB 分布式任务调度框架、Easy Excel 等中间件技术',
 	},
 	{
 		percentage: 75, status: '', text: '熟悉类加载机制、内存模型、垃圾回收机制、垃圾回收算法等 JVM 基本原理，了解 JVM 调优',
 	},
 	{
-		percentage: 50, status: 'warning', text: '了解常用的设计模式，有实际的项目应用经验'
+		percentage: 50, status: 'warning', text: '了解常用的设计模式，具有实际的项目应用经验',
 	},
 ];
 
-const summary = "熟悉 SaaS 系统、分布式电商会员系统和告警子中心运营系统研发，有较强的责任心，具备良好的沟通能力和团队协作精神。";
+const summary = "熟悉 SaaS 系统、分布式电商会员系统和运营保障系统研发，有较强的责任心，具备良好的沟通能力和团队协作精神。";
 
 const resumes = [oscResume, enbrandsResume, ktccResume];
 
