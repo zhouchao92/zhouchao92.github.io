@@ -8,7 +8,7 @@
 // 便于修改
 module.exports = {
   metaInfo: {
-    title: '周超 | 个人简历'
+    title: '周超 | 简历'
   },
   components: {
     'resume': httpVueLoader('/src/pages/resume.vue')

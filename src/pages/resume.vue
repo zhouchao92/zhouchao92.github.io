@@ -147,6 +147,9 @@
 
 <script>
 module.exports = {
+  metaInfo: {
+    title: "周超 | 简历",
+  },
   data() {
     return {
       wechatImage: ["/static/wechat.jpg"],
