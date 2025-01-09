@@ -28,7 +28,7 @@ const oscResume = {
 		"基于 Promethues 获取容器 POD 的各项核心指标信息以及 RocketMQ 客户端 API 完成端到端微服务性能指标监控。"
 	],
 	technology: [
-		"Spring Cloud Alibaba", "Spring Boot", "MyBatisPlus", "PostgreSQL", "Oracle", "Redis", "Kafka", "RocketMQ", "XXL-JOB", "Zeebe"
+		"Spring Cloud Alibaba", "Spring Boot", "MyBatisPlus", "PostgreSQL", "Oracle", "Redis", "Kafka", "RocketMQ", "XXL-JOB", "Zeebe", "Flink"
 	],
 	company: "中通服软件科技有限公司（武汉）",
 	position: "Java开发工程师",
@@ -36,9 +36,9 @@ const oscResume = {
 	jobContent: [
 		"负责开发告警资源采集 Kettle 程序，开发与维护功能业务代码，对外接口开发与联调工作；",
 		"完成告警相关流程编排场景设计与功能开发，采集与解析网管 Kafka 和 RocketMQ 推送的告警；",
-		"解决生产环境的 BUG，优化系统代码与相关 SQL，完成项目版本发布和功能验证工作。"
+		"解决系统安全扫描漏洞问题与系统生产环境的 BUG，优化系统代码与服务性能，完成项目版本迭代和功能验证工作，管理 git 本地分支源代码。"
 	],
-	achievement: "告警设备数据采集入库，动环专业获取告警数据接口开发，告警延时入库监控、动环采集器心跳异常监控，集团两级协同告警上报与网元数据统计上报，统计每小时告警并根据基线值和阈值上下限生成软告警，主导 Oracle 网元库迁移至 PostgreSQL 数据库工作，对接电信统一门户系统。"
+	achievement: "数据与无线专业告警设备资源数据采集与入库，告警数据供第三方系统查询接口开发，告警延时入库监控、动环采集器心跳异常监控、告警量基线监控等系统指标自监控任务研发，降低30%人工日常巡检工作量，完成集团两级协同告警上报与网元数据统计上报任务，达到集团考核标准优秀等级，主导并完成 Oracle 网元库迁移至 PostgreSQL 数据库70%工作量，全量完成 Zeebe 流程编排服务引擎本地化部署与业务需求开发，实现系统 https 访问，指导初级开发工程师完成日常系统需求代码开发与系统维护。"
 };
 
 const enbrandsResume = {
@@ -107,6 +107,9 @@ const specialTalent = [
 	},
 	{
 		percentage: 75, status: '', text: '熟悉类加载机制、内存模型、垃圾回收机制、垃圾回收算法等 JVM 基本原理，了解 JVM 调优',
+	},
+	{
+		percentage: 50, status: 'warning', text: '了解 Flink 流式处理、状态管理、容错机制等基本原理，具备项目实践经验',
 	},
 	{
 		percentage: 50, status: 'warning', text: '了解常用的设计模式，具有实际的项目应用经验',
