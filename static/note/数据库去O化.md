@@ -7,6 +7,12 @@ Oracle 数据库可迁移至 MySQL、Postgresql 数据库。
 ## sql语法
 针对业务中的 sql 语句，可能采用了 Oracle 函数而其他数据库不存在的，比如 nvl，这种判空的语法，需要人工核对。
 
+```sql
+// Oracle 特有语法
+SELECT 1 FROM DUAL
+
+```
+
 ## 数据全量同步
 一般可以借助 Kettle 的表输入和表输出组件来实现数据的全量迁移，性能参数可以通过 shell 脚本来指定 jvm 的参数，从而提高迁移效率。
 
