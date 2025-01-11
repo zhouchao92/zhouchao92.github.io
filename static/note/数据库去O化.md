@@ -1,5 +1,5 @@
 # 数据库去O化
-Oracle 数据库可迁移至 MySQL、Postgresql 数据库。
+为了信创环境的建设，国内大部分软件系统都逐步要求数据库去O化，即 Oracle 数据库需要迁移至 MySQL、Postgresql 数据库。
 
 ## 表结构迁移
 借助 AI 对话，将导出的 Oracle 表结构转换为其他数据库的表结构，需要额外注意序列、主键、索引等信息。
@@ -9,7 +9,7 @@ Oracle 数据库可迁移至 MySQL、Postgresql 数据库。
 
 ```sql
 // Oracle 特有语法
-SELECT 1 FROM DUAL
+SELECT 1 FROM DUAL;
 
 ```
 
