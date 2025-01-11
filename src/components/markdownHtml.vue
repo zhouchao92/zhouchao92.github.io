@@ -92,6 +92,10 @@ module.exports = {
   border-radius: 4px;
 }
 
+.markdown-body a{
+  text-decoration: none;
+}
+
 /* .markdown-body code {
   background-color: #f7f7f7;
   padding: 2px 4px;
