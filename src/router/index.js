@@ -19,6 +19,10 @@ const router = new VueRouter({
     {
       path: '/project',
       component: httpVueLoader('/src/pages/project.vue')
+    },
+    {
+      path: '/quickQuery',
+      component: httpVueLoader('/src/pages/quickQuery.vue')
     }
   ],
   mode: 'hash'

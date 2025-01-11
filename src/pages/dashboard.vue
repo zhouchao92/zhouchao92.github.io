@@ -9,6 +9,7 @@
       <el-menu-item index="/resume">简历</el-menu-item>
       <el-menu-item index="/note">笔记</el-menu-item>
       <el-menu-item index="/project">项目</el-menu-item>
+      <el-menu-item index="/quickQuery">快速导航</el-menu-item>
     </el-menu>
   </div>
 </template>
@@ -24,5 +25,4 @@ module.exports = {
 };
 </script>
 
-<style>
-</style>
+<style></style>
