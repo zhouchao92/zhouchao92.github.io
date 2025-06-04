@@ -17,7 +17,7 @@ const personInfo = {
 	]
 };
 
-const oscResume = {
+const ccssoftResume = {
 	timestamp: "2023/04/24 - 至今",
 	projectName: "湖北电信告警子中心系统",
 	projectDesc: "系统基于采集器程序从华为、中兴、烽火等网管处获取设备异常信息，先经过 Flink 程序对告警数据进行标准化、割接等规则匹配，对其进行打标，再对数据进行预处理，符合派单条件的调用第三方综调系统生成工单，送至运营岗位处理。",
@@ -38,7 +38,7 @@ const oscResume = {
 		"完成告警相关流程编排场景设计与功能开发，采集与解析网管 Kafka 和 RocketMQ 推送的告警；",
 		"解决系统安全扫描漏洞问题与系统生产环境的 BUG，优化系统代码与服务性能，完成项目版本迭代和功能验证工作，管理 git 省内分支源代码。"
 	],
-	achievement: "数据与无线专业告警设备资源数据采集与入库，告警数据供第三方系统查询接口开发，告警延时入库监控、动环采集器心跳异常监控、告警量基线监控等系统指标自监控任务研发，降低30%人工日常巡检工作量，完成集团两级协同告警上报与网元数据统计上报任务，达到集团考核标准优秀等级，主导并完成 Oracle 网元库迁移至 PostgreSQL 数据库70%工作量，全量完成 Zeebe 流程编排服务引擎本地化部署与业务需求开发，实现系统 https 访问，指导初级开发工程师完成日常系统需求代码开发与系统维护。"
+	achievement: "数据与无线专业告警设备资源数据采集与入库，告警数据供第三方系统查询接口开发，告警延时入库监控、动环采集器心跳异常监控、告警量基线监控等系统指标自监控任务研发，降低30%人工日常巡检工作量，完成集团两级协同告警上报与网元数据统计上报任务，达到集团考核标准优秀等级，主导并完成 Oracle 网元库迁移至 PostgreSQL 数据库70%工作量，独立完成 Zeebe 流程编排服务引擎本地化部署与业务需求开发，实现系统 https 访问，指导初级开发工程师完成日常系统需求代码开发与系统维护。"
 };
 
 const enbrandsResume = {
@@ -49,7 +49,7 @@ const enbrandsResume = {
 		"天猫、唯品会、抖音、京东会员通平台标准化 spi 接口开发，积分等级调整业务的重试与最终一致性保障代码开发；",
 		"唯品会、抖音平台会员通品牌数据中心对接，平台-云积分-品牌全链路联调，支撑项目上线；",
 		"完成 gateway 网关服务阿里全域会员通、京东会员通和抖音会员通接口路由与新老服务流量分发功能；",
-		"结合日志文件排查新老会员通服务线上问题，优化会员通项目业务代码。"
+		"排查新老会员通系统线上问题，解决品牌会员用户绑定、积分变更、订单信息等异常，优化会员通项目业务代码。"
 	],
 	technology: [
 		"Spring Cloud Alibaba", "Spring Boot", "MyBatis", "MySQL", "Redis", "Kafka", "XXL-JOB"
@@ -94,10 +94,10 @@ const specialTalent = [
 		percentage: 100, status: 'success', text: '熟练掌握 Java 集合、反射、并发、IO、多线程等技术',
 	},
 	{
-		percentage: 100, status: 'success', text: '熟练掌握 Spring、Spring MVC、Spring Boot、MyBatis、Spring Cloud 等主流技术框架',
+		percentage: 100, status: 'success', text: '熟练掌握 Spring、Spring MVC、Spring Boot、MyBatis Plus、Spring Cloud Alibaba 等主流技术框架',
 	},
 	{
-		percentage: 100, status: 'success', text: '熟练掌握 MySQL 数据库以及锁、索引和事务相关原理，熟悉 MySQL 调优',
+		percentage: 100, status: 'success', text: '熟练掌握 MySQL、Postgres 数据库以及锁、索引和事务相关原理，熟悉 MySQL、Postgres 调优',
 	},
 	{
 		percentage: 75, status: '', text: '熟悉 Redis 缓存数据库的使用，掌握 Redis 的数据结构、分布式锁的原理以及 Redis 的应用场景',
@@ -112,12 +112,12 @@ const specialTalent = [
 		percentage: 50, status: 'warning', text: '了解 Flink 流式处理、状态管理、容错机制等基本原理，具备项目实践经验',
 	},
 	{
-		percentage: 50, status: 'warning', text: '了解常用的设计模式，具有实际的项目应用经验',
+		percentage: 50, status: 'warning', text: '了解常用的设计模式，如单例、工厂、策略、代理、适配器等设计模式，具有实际的项目应用经验',
 	},
 ];
 
-const summary = "熟悉 SaaS 系统、分布式电商会员系统和运营保障系统研发，有较强的责任心，具备良好的沟通能力和团队协作精神。";
+const summary = "熟悉 医疗SaaS、电商会员通和运营保障等业务，有多年的产品交付工作经验与高并发分布式系统开发经验，有较强的责任心，具备良好的沟通能力和团队协作精神。";
 
-const resumes = [oscResume, enbrandsResume, ktccResume];
+const resumes = [ccssoftResume, enbrandsResume, ktccResume];
 
 export { resumes, specialTalent, personInfo, summary };
