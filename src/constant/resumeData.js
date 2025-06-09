@@ -116,7 +116,7 @@ const specialTalent = [
 	},
 ];
 
-const summary = "熟悉 医疗SaaS、电商会员通和运营保障等业务，有多年的产品交付工作经验与高并发分布式系统开发经验，有较强的责任心，具备良好的沟通能力和团队协作精神。";
+const summary = "熟悉医疗SaaS、电商会员通和运营保障等业务，多年的产品交付工作经验与高并发分布式系统开发经验，有较强的责任心，具备良好的沟通能力和团队协作精神。";
 
 const resumes = [ccssoftResume, enbrandsResume, ktccResume];
 
