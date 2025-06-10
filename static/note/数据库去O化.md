@@ -30,7 +30,7 @@ SELECT 1 FROM DUAL;
 
 Alibaba 的开源工具 [datax](https://github.com/alibaba/DataX)，采用 json 配置数据库类型、性能参数与业务 sql 的形式，可以在短时间内进行业务切换，以及完成数据的迁移。
 
-datax 结合 python 的定时调度框架实现定时调度。启动指定参数 `python python_filepath cron_filepat`，cron_filepath 中按照 6 位 cron 表达式 + 脚本路径配置任务。为了监测服务可用性，可以通过配置任务 `0/1 * * * * echo "[$(date +'%Y-%m-%d %H:%M:%S')] datax heartbeat"` 每1分钟输出一次心跳信息。
+datax 结合 python 的定时调度框架实现定时调度。启动指定参数 `python python_filepath cron_filepath`，cron_filepath 中按照 6 位 cron 表达式 + 脚本路径配置任务。为了监测服务可用性，可以通过配置任务 `0/1 * * * * echo "[$(date +'%Y-%m-%d %H:%M:%S')] datax heartbeat"` 每1分钟输出一次心跳信息。
 
 ```python
 # -*- coding: utf-8 -*-
