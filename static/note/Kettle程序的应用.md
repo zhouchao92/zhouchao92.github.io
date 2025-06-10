@@ -9,7 +9,12 @@
 
 Kettle 程序一般是在 Windows 系统界面进行开发功能。
 
-在部分流程如csv文件解析中，如果分隔符为16进制 ASCII 码，可参考 
+
+### 特殊分割符案例
+
+在部分流程如csv文件解析中，如果分隔符为 ASCII 码，需要用到 `$[]`，其中[]中的值为ASCII码中的十六进制数。
+
+![ASCII字符表](/static/pic/ASCII字符表.png)
 
 
 ## 程序部署
@@ -20,6 +25,9 @@ Kettle 程序一般是在 Windows 系统界面进行开发功能。
 2. unzip 命令解压 data-integration.zip `unzip data-integration.zip -d ./`
 3. kettle 目录赋.sh文件执行权限 `chmod +X *.sh`
 4. `./kitchen.sh` 检查是否可用
+
+
+### 空字符串优化
 
 解决空字符被替换识别为 null 问题
 ```bash
