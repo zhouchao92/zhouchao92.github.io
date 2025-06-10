@@ -22,5 +22,5 @@ SELECT 1 FROM DUAL;
 - 耗时不高或者内存占用低的任务，采用XXL-JOB的方式实现，最大限度地将服务部署上云。
 
 ## 开源工具
-Alibaba 的开源工具 ![datax](https://github.com/alibaba/DataX)，采用 json 配置数据库类型、性能参数与业务 sql 的形式，可以在短时间内进行业务切换，以及完成数据的迁移。
+Alibaba 的开源工具 [datax](https://github.com/alibaba/DataX)，采用 json 配置数据库类型、性能参数与业务 sql 的形式，可以在短时间内进行业务切换，以及完成数据的迁移。
 
