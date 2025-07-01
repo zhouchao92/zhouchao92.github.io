@@ -32,11 +32,11 @@ module.exports = {
 
 <style>
 .markdown-body {
-  margin: 0 auto;
-  padding: 0.8rem 1rem;
+  /* margin: 0 auto; */
+  /* padding: 0.8rem 1rem; */
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  /* border-radius: 4px; */
 }
 
 .markdown-body h1,
