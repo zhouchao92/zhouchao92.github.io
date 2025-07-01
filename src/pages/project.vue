@@ -1,7 +1,12 @@
 <template>
   <div class="project-box">
     <div class="project-index">
-      <el-tabs v-model="activteMarkdownIndex" @tab-click="handleClick">
+      <el-tabs
+        :class="isWindows ? 'tab-index-vertical' : ''"
+        v-model="activteMarkdownIndex"
+        @tab-click="handleClick"
+        :tab-position="isWindows ? 'left' : 'top'"
+      >
         <el-tab-pane
           :index="filename"
           v-for="(filename, index) in markdownFilenmaes.projects"
@@ -31,6 +36,7 @@ module.exports = {
     return {
       markdownPath: "",
       activteMarkdownIndex: "",
+      isWindows: true,
     };
   },
   methods: {
@@ -46,6 +52,15 @@ module.exports = {
   mounted() {
     if (this.markdownFilenmaes.projects.length > 0) {
       this.changeMarkdownIndex(this.markdownFilenmaes.projects[0]);
+
+      if (
+        /Mobi|Android|iPhone/i.test(navigator.userAgent) ||
+        window.screen.width < 900
+      ) {
+        this.isWindows = false;
+      } else {
+        this.isWindows = true;
+      }
     }
   },
 };
