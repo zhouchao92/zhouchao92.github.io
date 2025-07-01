@@ -2,7 +2,7 @@
   <div class="note-box">
     <div class="note-index">
       <el-tabs
-        :class="isWindows ? 'tab-index-vertical' : ''"
+        :class="isWindows ? 'tab-index-vertical' : 'tab-index-horizontal'"
         v-model="activteMarkdownIndex"
         @tab-click="handleClick"
         :tab-position="isWindows ? 'left' : 'top'"
@@ -17,8 +17,7 @@
       </el-tabs>
     </div>
 
-    <markdownhtml class="note-content" :markdown-path="markdownPath">
-    </markdownhtml>
+    <markdownhtml class="note-content" :markdown-path="markdownPath"> </markdownhtml>
   </div>
 </template>
 
@@ -54,10 +53,7 @@ module.exports = {
       this.changeMarkdownIndex(this.markdownFilenmaes.notes[0]);
     }
 
-    if (
-      /Mobi|Android|iPhone/i.test(navigator.userAgent) ||
-      window.screen.width < 900
-    ) {
+    if (/Mobi|Android|iPhone/i.test(navigator.userAgent) || window.screen.width < 900) {
       this.isWindows = false;
     } else {
       this.isWindows = true;
@@ -66,5 +62,4 @@ module.exports = {
 };
 </script>
 
-<style>
-</style>
+<style></style>

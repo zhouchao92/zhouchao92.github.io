@@ -2,7 +2,7 @@
   <div class="project-box">
     <div class="project-index">
       <el-tabs
-        :class="isWindows ? 'tab-index-vertical' : ''"
+        :class="isWindows ? 'tab-index-vertical' : 'tab-index-horizontal'"
         v-model="activteMarkdownIndex"
         @tab-click="handleClick"
         :tab-position="isWindows ? 'left' : 'top'"

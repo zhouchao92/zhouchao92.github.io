@@ -66,7 +66,19 @@ body {
 /* 垂直 tab */
 .tab-index-vertical {
   position: fixed;
-  top: 100px;
-  left: 10%;
+  right: 81.5%;
   z-index: 100;
+  max-height: 80%;
+  overflow: auto;
+}
+
+/* 隐藏滚动条 */
+.tab-index-vertical::-webkit-scrollbar {
+  display: none;
+}
+
+/* 水平 tab */
+.tab-index-horizontal {
+  position: sticky;
+  top: 0;
 }
