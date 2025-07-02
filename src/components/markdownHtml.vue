@@ -37,7 +37,6 @@ module.exports = {
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
   /* border-radius: 4px; */
-  font-family: '宋体', 'SimSun', '微软雅黑', 'Arial', sans-serif;
 }
 
 .markdown-body h1,
