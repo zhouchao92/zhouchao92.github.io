@@ -115,9 +115,12 @@ const specialTalent = [
 	{
 		percentage: 50, status: 'warning', text: '了解常用的设计模式，如单例、工厂、策略、代理、适配器等设计模式，具有实际的项目应用经验',
 	},
+	{
+		percentage: 50, status: 'warning', text: '了解主流 AI 技术，通过 Dify + Ollama + Qwen3 搭建过个人知识库，熟练应用 AI 辅助编程开发',
+	},
 ];
 
-const summary = "熟悉医疗SaaS、电商会员通和运营保障等业务，有多年的产品交付工作经验与高并发分布式系统开发经验，工作责任心强，具备良好的沟通能力和团队协作精神。";
+const summary = "熟悉医疗SaaS、电商会员通和运营保障等业务，有多年的产品交付工作经验与高并发分布式系统开发经验，热爱技术，工作责任心强，具备良好的沟通能力和团队协作精神。";
 
 const resumes = [ccssoftResume, enbrandsResume, ktccResume];
 
