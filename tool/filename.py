@@ -19,10 +19,14 @@ def rewrite(path, content):
 
 
 if __name__ == '__main__':
-    recruitment = listfilenames('static/recruitment')
-    project = listfilenames('static/project')
+    # recruitment = listfilenames('static/recruitment')
+    notes = listfilenames('static/note')
+    projects = listfilenames('static/project')
 
-    content = f'const recruitment = {recruitment};\nconst project = {project};\n\n'
-    content += 'export { recruitment, project };'
+    # content = f'const recruitment = {recruitment};\nconst project = {project};\n\n'
+    content = f'const notes = {notes};\nconst projects = {projects};\n\n'
+    # content += 'export { recruitment, projects };'
+    content += 'export { notes, projects };'
+    content += '\n'
 
     rewrite('src/constant/filenames.js', content)
