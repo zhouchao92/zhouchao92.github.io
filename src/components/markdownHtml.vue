@@ -91,7 +91,7 @@ module.exports = {
   border-radius: 4px;
 }
 
-.markdown-body a{
+.markdown-body a {
   text-decoration: none;
 }
 
@@ -102,4 +102,30 @@ module.exports = {
   font-size: 0.9em;
   color: #c7254e;
 } */
+
+/* 基础表格样式 */
+.markdown-body table {
+  border-collapse: collapse; /* 合并边框，避免双线 */
+  width: 100%;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.markdown-body table,
+th,
+td {
+  border: 1px solid #d0d0d0; /* 关键：给 table、th、td 都加边框 */
+}
+
+.markdown-body th,
+td {
+  padding: 8px 12px;
+  text-align: left;
+  background-color: #fafafa;
+}
+
+.markdown-body th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
 </style>
