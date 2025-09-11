@@ -5,7 +5,7 @@ const personInfo = {
 	birthday: "1998-08-17",
 	city: "湖北省黄冈市",
 	expect: "Java开发工程师",
-	workTime: Math.round((new Date() - new Date("2020-12-01")) / 1000 / 60 / 60 / 24 / 365) + "年工作经验",
+	workTime: Math.round((new Date() - new Date("2020-12-01")) / 1000 / 60 / 60 / 24 / 365) + "年工作经验(含半年实习)",
 	educations: [
 		{
 			timestamp: "2017/09/01 - 2021/06/30",
