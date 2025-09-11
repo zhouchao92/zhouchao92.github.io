@@ -128,4 +128,9 @@ td {
   background-color: #f0f0f0;
   font-weight: bold;
 }
+
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+}
 </style>
