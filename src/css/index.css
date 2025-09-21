@@ -83,3 +83,92 @@ body {
   position: sticky;
   top: 0;
 }
+
+/* 悬停效果 */
+/* .note-content h2,
+.project-content h2,
+.markdown-content h2 {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.note-content h2:hover,
+.project-content h2:hover,
+.markdown-content h2:hover {
+  background-color: #f5f7fa;
+  color: #409eff;
+}*/
+
+/* 指示器 */
+/* 
+.note-content h2::before,
+.project-content h2::before,
+.markdown-content h2::before {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.note-content h2:hover::before,
+.project-content h2:hover::before,
+.markdown-content h2:hover::before {
+  opacity: 1;
+}  */
+
+.index-content h2 {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 4px 8px;
+  position: relative;
+  margin: 8px 0;
+}
+
+/* 悬停效果 */
+.index-content h2:hover {
+  background-color: #f0f8ff;
+  color: #409eff;
+  box-shadow: 0 4px 8px rgba(64, 158, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* 点击效果 */
+.index-content h2:active {
+  transform: translateY(0);
+  background-color: #e6f3ff;
+}
+
+/* 添加指示图标 */
+.index-content h2::before {
+  margin-right: 8px;
+  font-size: 0.8em;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+/* 悬停时图标动画 */
+.index-content h2:hover::before {
+  transform: translateX(2px);
+}
+
+/* 焦点样式（键盘导航） */
+.index-content h2:focus {
+  outline: 1px solid #409eff;
+  outline-offset: 1px;
+}
+
+/* 添加底部边框效果 */
+.index-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.index-content h2:hover::after {
+  background-color: #409eff;
+}

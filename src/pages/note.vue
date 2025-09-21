@@ -9,7 +9,7 @@
       >
         <el-tab-pane
           :index="filename"
-          v-for="(filename, index) in markdownFilenmaes.notes"
+          v-for="(filename, index) in markdownFilenames.notes"
           :key="index"
           :label="filename"
           :name="filename"
@@ -17,13 +17,15 @@
       </el-tabs>
     </div>
 
-    <markdownhtml class="note-content" :markdown-path="markdownPath"> </markdownhtml>
+    <markdownhtml class="note-content" :markdown-path="markdownPath">
+    </markdownhtml>
   </div>
 </template>
 
 <script>
 const markdownPathPrefix = "/static/note/";
 const markdownPathSuffix = ".md";
+
 module.exports = {
   metaInfo: {
     title: "周超 | 笔记",
@@ -31,11 +33,10 @@ module.exports = {
   components: {
     markdownhtml: httpVueLoader("/src/components/markdownHtml.vue"),
   },
+  mixins: [Vue.prototype.$markdownTabMixin],
   data() {
     return {
-      markdownPath: "",
-      activteMarkdownIndex: "",
-      isWindows: true,
+      basePath: markdownPathPrefix,
     };
   },
   methods: {
@@ -47,17 +48,15 @@ module.exports = {
       this.markdownPath =
         markdownPathPrefix + this.activteMarkdownIndex + markdownPathSuffix;
     },
-  },
-  mounted() {
-    if (this.markdownFilenmaes.notes.length > 0) {
-      this.changeMarkdownIndex(this.markdownFilenmaes.notes[0]);
-    }
-
-    if (/Mobi|Android|iPhone/i.test(navigator.userAgent) || window.screen.width < 900) {
-      this.isWindows = false;
-    } else {
-      this.isWindows = true;
-    }
+    isValidMarkdownFile(filename) {
+      return this.markdownFilenames.notes.includes(filename);
+    },
+    hasMarkdownFiles() {
+      return this.markdownFilenames.notes.length > 0;
+    },
+    getMarkdownContainerSelector() {
+      return ".note-content";
+    },
   },
 };
 </script>

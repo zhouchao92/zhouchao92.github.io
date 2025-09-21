@@ -9,7 +9,7 @@
       >
         <el-tab-pane
           :index="filename"
-          v-for="(filename, index) in markdownFilenmaes.projects"
+          v-for="(filename, index) in markdownFilenames.projects"
           :key="index"
           :label="filename"
           :name="filename"
@@ -32,11 +32,10 @@ module.exports = {
   components: {
     markdownhtml: httpVueLoader("/src/components/markdownHtml.vue"),
   },
+  mixins: [Vue.prototype.$markdownTabMixin],
   data() {
     return {
-      markdownPath: "",
-      activteMarkdownIndex: "",
-      isWindows: true,
+      basePath: markdownPathPrefix,
     };
   },
   methods: {
@@ -48,20 +47,15 @@ module.exports = {
       this.markdownPath =
         markdownPathPrefix + this.activteMarkdownIndex + markdownPathSuffix;
     },
-  },
-  mounted() {
-    if (this.markdownFilenmaes.projects.length > 0) {
-      this.changeMarkdownIndex(this.markdownFilenmaes.projects[0]);
-
-      if (
-        /Mobi|Android|iPhone/i.test(navigator.userAgent) ||
-        window.screen.width < 900
-      ) {
-        this.isWindows = false;
-      } else {
-        this.isWindows = true;
-      }
-    }
+    isValidMarkdownFile(filename) {
+      return this.markdownFilenames.projects.includes(filename);
+    },
+    hasMarkdownFiles() {
+      return this.markdownFilenames.projects.length > 0;
+    },
+    getMarkdownContainerSelector() {
+      return ".project-content";
+    },
   },
 };
 </script>
