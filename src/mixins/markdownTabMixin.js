@@ -7,7 +7,7 @@ const markdownTabMixin = {
     },
     indexFileName: {
       type: String,
-      default: "_index"
+      default: "_索引"
     }
   },
 
