@@ -10,7 +10,7 @@ def listfilenames(path):
   filenames = os.listdir(path)
   # 跳过索引文件 index.md
   for filename in filenames:
-    if filename == 'index.md':
+    if filename == '0.索引.md':
       continue
     names.append(filename[0:-3])
   return names
