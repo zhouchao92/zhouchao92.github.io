@@ -100,9 +100,13 @@ const markdownTabMixin = {
   mounted: function () {
     this.initDeviceDetection();
 
-    if (this.hasMarkdownFiles && this.hasMarkdownFiles()) {
-      this.loadIndexPage();
-      this.bindMarkdownClickEvents();
+    try {
+      if (typeof this.hasMarkdownFiles === 'function' && this.hasMarkdownFiles()) {
+        this.loadIndexPage();
+        this.bindMarkdownClickEvents();
+      }
+    } catch (error) {
+      console.error('Error during markdown tab initialization:', error);
     }
   },
 
