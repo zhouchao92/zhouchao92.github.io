@@ -101,7 +101,7 @@ const markdownTabMixin = {
     this.initDeviceDetection();
 
     try {
-      if (typeof this.hasMarkdownFiles === 'function' && this.hasMarkdownFiles()) {
+      if (this.hasMarkdownFiles && typeof this.hasMarkdownFiles === 'function' && this.hasMarkdownFiles()) {
         this.loadIndexPage();
         this.bindMarkdownClickEvents();
       }
