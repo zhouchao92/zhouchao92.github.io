@@ -8,6 +8,7 @@
         :tab-position="isWindows ? 'left' : 'top'"
       >
         <el-tab-pane
+          :index="filename"
           v-for="(filename, index) in markdownFilenames.projects"
           :key="index"
           :label="filename"
@@ -15,14 +16,15 @@
         ></el-tab-pane>
       </el-tabs>
     </div>
-    <markdownhtml class="project-content" :markdown-path="markdownPath" />
+
+    <markdownhtml class="project-content" :markdown-path="markdownPath">
+    </markdownhtml>
   </div>
 </template>
 
 <script>
 const markdownPathPrefix = "/static/project/";
 const markdownPathSuffix = ".md";
-
 module.exports = {
   metaInfo: {
     title: "周超 | 项目",
@@ -34,20 +36,19 @@ module.exports = {
   data() {
     return {
       basePath: markdownPathPrefix,
-      activteMarkdownIndex: "",
-      markdownPath: "",
     };
   },
   methods: {
     handleClick(tab, event) {
-      this.changeMarkdownIndex(tab.name);
+      this.changeMarkdownIndex(tab.$attrs.index);
     },
     changeMarkdownIndex(index) {
       this.activteMarkdownIndex = index;
-      this.markdownPath = markdownPathPrefix + index + markdownPathSuffix;
+      this.markdownPath =
+        markdownPathPrefix + this.activteMarkdownIndex + markdownPathSuffix;
     },
     isValidMarkdownFile(filename) {
-      return this.markdownFilenames.projects.includes(filename);
+      return this.markdownFilenames.projects && this.markdownFilenames.projects.includes(filename);
     },
     hasMarkdownFiles() {
       return this.markdownFilenames.projects && this.markdownFilenames.projects.length > 0;
@@ -55,27 +56,7 @@ module.exports = {
     getMarkdownContainerSelector() {
       return ".project-content";
     },
-    initTabAndContent() {
-      // 初始化 Tab 和 markdown 内容（首次进入）
-      if (this.hasMarkdownFiles()) {
-        const first = this.markdownFilenames.projects[0];
-        if (first) {
-          this.changeMarkdownIndex(first);
-        }
-      }
-    },
   },
-  mounted() {
-    this.initTabAndContent();
-  },
-  watch: {
-    // 若 markdown 文件名是异步赋值，监听 data 的变化
-    'markdownFilenames.projects'(newList) {
-      if (newList && newList.length && !this.activteMarkdownIndex) {
-        this.initTabAndContent();
-      }
-    }
-  }
 };
 </script>
 

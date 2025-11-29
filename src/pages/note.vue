@@ -49,10 +49,10 @@ module.exports = {
         markdownPathPrefix + this.activteMarkdownIndex + markdownPathSuffix;
     },
     isValidMarkdownFile(filename) {
-      return this.markdownFilenames.notes.includes(filename);
+      return this.markdownFilenames.notes && this.markdownFilenames.notes.includes(filename);
     },
     hasMarkdownFiles() {
-      return this.markdownFilenames.notes.length > 0;
+      return this.markdownFilenames.notes && this.markdownFilenames.notes.length > 0;
     },
     getMarkdownContainerSelector() {
       return ".note-content";
