@@ -48,10 +48,10 @@ module.exports = {
         markdownPathPrefix + this.activteMarkdownIndex + markdownPathSuffix;
     },
     isValidMarkdownFile(filename) {
-      return this.markdownFilenames.projects.includes(filename);
+      return this.markdownFilenames.projects && this.markdownFilenames.projects.includes(filename);
     },
     hasMarkdownFiles() {
-      return this.markdownFilenames.projects.length > 0;
+      return this.markdownFilenames.projects && this.markdownFilenames.projects.length > 0;
     },
     getMarkdownContainerSelector() {
       return ".project-content";
