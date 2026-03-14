@@ -39,7 +39,7 @@ const ccssoftResume = {
 		"部署电信集团运保基线系统，通过武汉电信固网宽带 pppoe 拨测机实现仿真拨测，输出拨测预警；",
 		"解决系统安全扫描漏洞问题与系统生产环境的 BUG，优化系统代码与服务性能，完成项目版本迭代和功能验证工作，管理 git 省内分支源代码。"
 	],
-	achievement: "数据与无线专业告警设备资源数据采集与入库，告警数据供第三方系统查询接口开发，告警延时入库监控、动环采集器心跳异常监控、告警量基线监控等系统指标自监控任务研发，降低30%人工日常巡检工作量，完成集团两级协同告警上报、网元数据统计、一事一图事件上报任务，达到集团考核标准优秀等级，主导并完成 Oracle 网元库迁移至 PostgreSQL 数据库70%工作量，独立完成 Zeebe 流程编排服务引擎本地化部署与业务需求开发，实现系统 https 访问，指导初级开发工程师完成日常系统需求代码开发与系统维护。"
+	achievement: "利用 Kettle 实现数据与无线专业告警设备资源数据采集与入库，提高了资源采集的性能和数据实时性，通过告警延时入库监控、动环采集器心跳异常监控、告警量基线监控等系统指标自监控任务研发，降低了30%人工日常巡检工作量，完成集团两级协同告警上报、网元数据统计、一事一图事件上报任务，达到集团考核标准优秀等级，主导并完成 Oracle 网元库迁移至 PostgreSQL 数据库70%工作量，独立完成 Zeebe 流程编排服务引擎本地化部署与业务需求开发，实现系统 https 访问，提高系统的安全性，指导初级开发工程师完成日常系统需求代码开发与系统维护。"
 };
 
 const enbrandsResume = {
@@ -98,7 +98,7 @@ const specialTalent = [
 		percentage: 100, status: 'success', text: '熟练掌握 Spring、Spring MVC、Spring Boot、MyBatis Plus、Spring Cloud Alibaba 等主流技术框架',
 	},
 	{
-		percentage: 100, status: 'success', text: '熟练掌握 MySQL、Postgres 数据库以及锁、索引和事务相关原理，熟悉 MySQL、Postgres 调优',
+		percentage: 100, status: 'success', text: '熟练掌握 MySQL、Postgres 数据库以及锁、索引和事务相关原理，熟悉 MySQL、Postgres 数据库调优',
 	},
 	{
 		percentage: 75, status: '', text: '熟悉 Redis 缓存数据库的使用，掌握 Redis 的数据结构、分布式锁的原理以及 Redis 的应用场景',
