@@ -54,27 +54,67 @@ const markdownTabMixin = {
       }
     },
 
+    getMarkdownContainer: function () {
+      return document.querySelector(this.getMarkdownContainerSelector()) ||
+        document.querySelector(".markdown-content") ||
+        document.querySelector(".content");
+    },
+
+    applyMarkdownIndexStyle: function (markdownContainer) {
+      if (this.isIndexPage) {
+        markdownContainer.classList.add('index-content');
+      } else {
+        markdownContainer.classList.remove('index-content');
+      }
+
+      markdownContainer.removeEventListener(
+        "click",
+        this.handleMarkdownClick
+      );
+      markdownContainer.addEventListener(
+        "click",
+        this.handleMarkdownClick
+      );
+    },
+
+    stopMarkdownContainerWatcher: function () {
+      if (this._markdownContainerObserver) {
+        this._markdownContainerObserver.disconnect();
+        this._markdownContainerObserver = null;
+      }
+    },
+
+    watchMarkdownContainer: function () {
+      if (this._markdownContainerObserver) {
+        return;
+      }
+
+      this._markdownContainerObserver = new MutationObserver(() => {
+        const markdownContainer = this.getMarkdownContainer();
+        if (markdownContainer) {
+          this.applyMarkdownIndexStyle(markdownContainer);
+          this.stopMarkdownContainerWatcher();
+        }
+      });
+
+      this._markdownContainerObserver.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+
+      setTimeout(() => {
+        this.stopMarkdownContainerWatcher();
+      }, 5000);
+    },
+
     bindMarkdownClickEvents: function () {
       this.$nextTick(() => {
         setTimeout(() => {
-          const markdownContainer = document.querySelector(this.getMarkdownContainerSelector()) ||
-            document.querySelector(".markdown-content") ||
-            document.querySelector(".content");
+          const markdownContainer = this.getMarkdownContainer();
           if (markdownContainer) {
-            if (this.isIndexPage) {
-              markdownContainer.classList.add('index-content');
-            } else {
-              markdownContainer.classList.remove('index-content');
-            }
-
-            markdownContainer.removeEventListener(
-              "click",
-              this.handleMarkdownClick
-            );
-            markdownContainer.addEventListener(
-              "click",
-              this.handleMarkdownClick
-            );
+            this.applyMarkdownIndexStyle(markdownContainer);
+          } else {
+            this.watchMarkdownContainer();
           }
         }, 300);
       });
@@ -120,9 +160,8 @@ const markdownTabMixin = {
   },
 
   beforeDestroy: function () {
-    const markdownContainer = document.querySelector(this.getMarkdownContainerSelector()) ||
-      document.querySelector(".markdown-content") ||
-      document.querySelector(".content");
+    this.stopMarkdownContainerWatcher();
+    const markdownContainer = this.getMarkdownContainer();
     if (markdownContainer) {
       markdownContainer.removeEventListener("click", this.handleMarkdownClick);
       markdownContainer.classList.remove('index-content');
