@@ -4,7 +4,7 @@ import time
 import os
 
 # 从 .env 文件中读取 API_KEY
-API_KEY= os.getenv('API_KEY')
+API_KEY= os.getenv('AGNESS_API_KEY')
 CHAT_API_URL = 'https://apihub.agnes-ai.com/v1/chat/completions'
 IMAGE_API_URL = 'https://apihub.agnes-ai.com/v1/images/generations'
 VIDEO_API_URL = 'https://apihub.agnes-ai.com/v1/videos'
