@@ -19,17 +19,6 @@ const personInfo = {
 
 const ccssoftResume = {
 	timestamp: "2023/04/24 - 至今",
-	projectName: "运保告警子中心系统",
-	projectDesc: "系统基于采集器程序从华为、中兴、烽火、天元等网管处获取网元设备或动环设备的告警信息，将采集的告警统一格式后存储到 MQ，先经过 Flink 程序对告警数据进行标准化、割接等规则匹配，对其进行打标，再对数据进行预处理，符合派单条件的调用第三方综调系统生成工单，送至运营岗位处理。",
-	projectDuty: [
-		"实现 Kettle 对网元的设备信息、端口信息、板卡信息、电路信息等资源文件进行解析入库；",
-		"采用 MQ + Nacos 配置文件的形式实现告警数据实时转发功能，优化消息队列通讯方式的告警采集程序；",
-		"实现告警数据的入库情况监控，监测动环网管连接的心跳情况自动任务，生成各网管告警基线数据；",
-		"基于 Promethues 获取容器 POD 的各项核心指标信息以及 RocketMQ 客户端 API 完成端到端微服务性能指标监控。"
-	],
-	technology: [
-		"Spring Cloud Alibaba", "Spring Boot", "MyBatisPlus", "PostgreSQL", "Oracle", "Redis", "Kafka", "RocketMQ", "XXL-JOB", "Zeebe", "Flink"
-	],
 	company: "中通服软件科技有限公司（武汉）/ 胜通和",
 	position: "Java开发工程师",
 	business: "基于云网实时告警及性能数据，结合资源、业务与客户信息，提供面向全云网及业务的告警处理、跨域关联、故障定位及影响分析、故障预处理、故障预测、业务端到端告警监控和故障自动派单能力。",
@@ -39,22 +28,41 @@ const ccssoftResume = {
 		"部署电信集团运保基线系统，通过武汉电信固网宽带 pppoe 拨测机实现仿真拨测，输出拨测预警；",
 		"解决系统安全扫描漏洞问题与系统生产环境的 BUG，优化系统代码与服务性能，完成项目版本迭代和功能验证工作，管理 git 省内分支源代码。"
 	],
-	achievement: "利用 Kettle 实现数据与无线专业告警设备资源数据采集与入库，提高了资源采集的性能和数据实时性，通过告警延时入库监控、动环采集器心跳异常监控、告警量基线监控等系统指标自监控任务研发，降低了30%人工日常巡检工作量，完成集团两级协同告警上报、网元数据统计、一事一图事件上报任务，达到集团考核标准优秀等级，主导并完成 Oracle 网元库迁移至 PostgreSQL 数据库70%工作量，独立完成 Zeebe 流程编排服务引擎本地化部署与业务需求开发，实现系统 https 访问，提高系统的安全性，指导初级开发工程师完成日常系统需求代码开发与系统维护。"
+	achievement: "利用 Kettle 实现数据与无线专业告警设备资源数据采集与入库，提高了资源采集的性能和数据实时性；通过告警延时入库监控、动环采集器心跳异常监控、告警量基线监控等系统指标自监控任务研发，降低了30%人工日常巡检工作量；完成集团两级协同告警上报、网元数据统计、一事一图事件上报任务，达到集团考核标准优秀等级；主导并完成 Oracle 网元库迁移至 PostgreSQL 数据库70%工作量；独立完成 Zeebe 流程编排服务引擎本地化部署与业务需求开发；实现系统 https 访问，提高系统的安全性；指导初级开发工程师完成系统需求开发并完成省内代码 Review 工作，支撑系统日常维护工作。"
 };
+
+const ccssoftProjects = [
+	{
+		timestamp: ccssoftResume.timestamp,
+		projectName: "运保告警子中心系统",
+		projectDesc: "系统基于采集器程序从华为、中兴、烽火、天元等网管处获取网元设备或动环设备的告警信息，将采集的告警统一格式后存储到 MQ，先经过 Flink 程序对告警数据进行标准化、割接等规则匹配，对其进行打标，再对数据进行预处理，符合派单条件的调用第三方综调系统生成工单，送至运营岗位处理。",
+		projectDuty: [
+			"实现 Kettle 对网元的设备信息、端口信息、板卡信息、电路信息等资源文件进行解析入库；",
+			"采用 MQ + Nacos 配置文件的动态配置实现告警数据实时转发功能，优化消息队列通讯方式的告警采集程序；",
+			"实现告警数据的入库情况监控，监测动环网管连接的心跳情况自动任务，生成各网管告警基线数据；",
+			"基于 Promethues 获取容器 POD 的各项核心指标信息以及 RocketMQ 客户端 API 完成端到端微服务性能指标监控。"
+		],
+		technology: [
+			"Spring Cloud Alibaba", "Spring Boot", "MyBatisPlus", "PostgreSQL", "Oracle", "Redis", "Kafka", "RocketMQ", "XXL-JOB", "Zeebe", "Flink"
+		],
+	},
+	{
+		timestamp: "2025/09/01 - 2026/05/30",
+		projectName: "云网变更操作管理系统",
+		projectDesc: "基于若依开源框架的芋道前后端系统为基座，用于电信云网变更操作方案的发起、提级、审批、上报集团等全流程管控。",
+		projectDuty: [
+			"完成变更管理系统数字员工EOP接口开发，告警屏蔽校验、执行与终止功能开发，重保场景接收与校验业务开发；",
+			"迁移变更规则池、重点关注池、光缆割接等业务模块，实现基于 Flowable 框架的光缆割接冲突判定流程；",
+			"系统 jvm 参数调优，排查容器探活自动重启异常，支撑系统版本迭代，协助解决线上生产问题。"
+		],
+		technology: [
+			"Spring Boot", "MyBatisPlus", "PostgreSQL", "Redis", "Kafka", "XXL-JOB", "Flowable"
+		],
+	}
+];
 
 const enbrandsResume = {
 	timestamp: "2022/03/17 - 2022/09/05",
-	projectName: "云积分电商会员通系统",
-	projectDesc: "分布式微服务项目，实现了品牌CRM系统与电商平台线上线下会员绑定、解绑，积分、等级变更同步，会员订单数据推送，商品同步等业务，提供内部商家后台管理系统和电商平台内嵌小程序的接口。",
-	projectDuty: [
-		"天猫、唯品会、抖音、京东会员通平台标准化 spi 接口开发，积分等级调整业务的重试与最终一致性保障代码开发；",
-		"唯品会、抖音平台会员通品牌数据中心对接，平台-云积分-品牌全链路联调，支撑项目上线；",
-		"完成 gateway 网关服务阿里全域会员通、京东会员通和抖音会员通接口路由与新老服务流量分发功能；",
-		"排查新老会员通系统线上问题，解决品牌会员用户绑定、积分变更、订单信息等异常，优化会员通项目业务代码。"
-	],
-	technology: [
-		"Spring Cloud Alibaba", "Spring Boot", "MyBatis", "MySQL", "Redis", "Kafka", "XXL-JOB"
-	],
 	company: "深圳市云积分科技有限公司（武汉） ",
 	position: "Java开发工程师",
 	business: "各大电商平台（天猫、京东、唯品会、抖音）与品牌 CRM 会员通对接，实现双方系统的会员积分、等级、订单数据以及商品数据打通，维护商家后台管理系统和小程序的会员相关接口，为商家提供定制化的互动玩法。",
@@ -66,18 +74,25 @@ const enbrandsResume = {
 	achievement: "基本完成云积分与有赞数据中心对接天猫会员通（方案对接、代码开发和联调），完成唯品会会员通接入珀莱雅品牌和抖音会员通接入悦诗风吟美妆旗舰店品牌，协助完成欧莱雅旗下品牌（3CE、LRP）会员通接入。解决联合利华、欧莱雅、美素佳儿、美赞臣等多个品牌会员通线上数据问题。"
 };
 
+const enbrandsProjects = [
+	{
+		timestamp: enbrandsResume.timestamp,
+		projectName: "云积分电商会员通系统",
+		projectDesc: "分布式微服务项目，实现了品牌CRM系统与电商平台线上线下会员绑定、解绑，积分、等级变更同步，会员订单数据推送，商品同步等业务，提供内部商家后台管理系统和电商平台内嵌小程序的接口。",
+		projectDuty: [
+			"天猫、唯品会、抖音、京东会员通平台标准化 spi 接口开发，积分等级调整业务的重试与最终一致性保障代码开发；",
+			"唯品会、抖音平台会员通品牌数据中心对接，平台-云积分-品牌全链路联调，支撑项目上线；",
+			"完成 gateway 网关服务阿里全域会员通、京东会员通和抖音会员通接口路由与新老服务流量分发功能；",
+			"排查新老会员通系统线上问题，解决品牌会员用户绑定、积分变更、订单信息等异常，优化会员通项目业务代码。"
+		],
+		technology: [
+			"Spring Cloud Alibaba", "Spring Boot", "MyBatis", "MySQL", "Redis", "Kafka", "XXL-JOB"
+		],
+	}
+];
+
 const ktccResume = {
 	timestamp: "2020/12/01 - 2021/12/28",
-	projectName: "康博嘉云诊所医疗 SaaS 系统",
-	projectDesc: "单体架构的医疗 SaaS 系统，面向国内的民营诊所，包含病人线下看病的全部流程（预约、预诊、病历书写、医嘱开立、收费、发药、执行等）。",
-	projectDuty: [
-		"负责病历文书、医嘱开立、医嘱执行等模块的新功能开发与核心代码维护；",
-		"参与外治处方、视力筛查、验光单等功能的功能评审、代码开发以及前后端联调工作；",
-		"完成医嘱相关的统计分析和处方单据的报表 SQL，解决诊所线上医嘱相关问题。"
-	],
-	technology: [
-		"Spring Boot", "Spring MVC", "MyBatis", "PostgreSQL", "Redis", "Kafka", "FastDFS", "jQuery", "Vue"
-	],
 	company: "康博嘉云（北京）信息科技有限公司武汉分公司",
 	position: "Java开发工程师",
 	business: "面向国内全科诊所和中医诊所的民营医疗 SaaS 系统，为诊所提供预约、看诊（病历、医嘱）、收费、发药、医嘱执行和库房进销存的全流程服务。",
@@ -88,6 +103,23 @@ const ktccResume = {
 	],
 	achievement: "设计并完成PC端病历附件扫码上传功能，完成九种外治处方、视力筛查和验光单等新功能开发，协助前端工程师完成微信公众号医生端界面优化和产品重构。"
 };
+
+
+const ktccProjects = [
+	{
+		timestamp: ktccResume.timestamp,
+		projectName: "康博嘉云诊所医疗 SaaS 系统",
+		projectDesc: "单体架构的医疗 SaaS 系统，面向国内的民营诊所，包含病人线下看病的全部流程（预约、预诊、病历书写、医嘱开立、收费、发药、执行等）。",
+		projectDuty: [
+			"负责病历文书、医嘱开立、医嘱执行等模块的新功能开发与核心代码维护；",
+			"参与外治处方、视力筛查、验光单等功能的功能评审、代码开发以及前后端联调工作；",
+			"完成医嘱相关的统计分析和处方单据的报表 SQL，解决诊所线上医嘱相关问题。"
+		],
+		technology: [
+			"Spring Boot", "Spring MVC", "MyBatis", "PostgreSQL", "Redis", "Kafka", "FastDFS", "jQuery", "Vue"
+		],
+	}
+];
 
 
 const specialTalent = [
@@ -116,7 +148,7 @@ const specialTalent = [
 		percentage: 50, status: 'warning', text: '了解常用的设计模式，如单例、工厂、策略、代理、适配器等设计模式，具有实际的项目应用经验',
 	},
 	{
-		percentage: 50, status: 'warning', text: '了解主流 AI 技术，通过 Dify + Ollama + Qwen3 搭建过个人知识库，熟练应用 AI 辅助编程开发',
+		percentage: 50, status: 'warning', text: '了解 RAG、MCP、AI Agent 智能体等主流 AI 技术，通过 Dify + Ollama + Qwen3 搭建过个人知识库，熟练应用 AI 辅助编程开发',
 	},
 ];
 
@@ -124,4 +156,7 @@ const summary = "熟悉医疗SaaS、电商会员通和运营保障等业务，�
 
 const resumes = [ccssoftResume, enbrandsResume, ktccResume];
 
-export { resumes, specialTalent, personInfo, summary };
+// 合并成一个 列表
+const projects = [].concat(ccssoftProjects, enbrandsProjects, ktccProjects);
+
+export { resumes, projects, specialTalent, personInfo, summary };

@@ -93,17 +93,17 @@
         <h4>项目经历</h4>
       </el-divider>
       <el-timeline>
-        <el-timeline-item :index='resume' v-for="(resume,index) in resumeData.resumes" :key="index" :name="resume" placement="top" :timestamp="resume.timestamp">
+        <el-timeline-item :index='project' v-for="(project,index) in resumeData.projects" :key="index" :name="project" placement="top" :timestamp="project.timestamp">
           <el-card>
-            <h4>{{resume.projectName}}</h4>
+            <h4>{{project.projectName}}</h4>
             <p>
-              <el-tag class="technology-label" v-for="item in resume.technology" :key="item" type="warning" size="small">{{item}}</el-tag>
+              <el-tag class="technology-label" v-for="item in project.technology" :key="item" type="warning" size="small">{{item}}</el-tag>
             </p>
-            <p><b>项目描述：</b>{{resume.projectDesc}}</p>
+            <p><b>项目描述：</b>{{project.projectDesc}}</p>
             <div>
               <b>工作职责：</b>
               <ol class="sub-indent-30">
-                <li v-for="duty in resume.projectDuty" :key="duty">{{duty}}</li>
+                <li v-for="duty in project.projectDuty" :key="duty">{{duty}}</li>
               </ol>
             </div>
           </el-card>
