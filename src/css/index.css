@@ -120,26 +120,30 @@ body {
   opacity: 1;
 }  */
 
+/* 索引页目录项，色调与快速导航页（--nav-accent: #6b7a8c）保持一致 */
 .index-content h2 {
   cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 4px 8px;
+  transition: all 0.25s ease;
+  padding: 8px 12px;
   position: relative;
   margin: 8px 0;
+  color: #303133;
+  border-left: 4px solid #6b7a8c;
+  border-radius: 0 4px 4px 0;
 }
 
-/* 悬停效果 */
+/* 悬停效果：与快速导航链接 hover 一致 */
 .index-content h2:hover {
-  background-color: #f0f8ff;
-  color: #409eff;
-  box-shadow: 0 4px 8px rgba(64, 158, 255, 0.2);
-  transform: translateY(-2px);
+  background-color: #6b7a8c;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(107, 122, 140, 0.25);
+  transform: translateY(-1px);
 }
 
 /* 点击效果 */
 .index-content h2:active {
   transform: translateY(0);
-  background-color: #e6f3ff;
+  background-color: #5d6b7c;
 }
 
 /* 添加指示图标 */
@@ -157,11 +161,11 @@ body {
 
 /* 焦点样式（键盘导航） */
 .index-content h2:focus {
-  outline: 1px solid #409eff;
+  outline: 1px solid #6b7a8c;
   outline-offset: 1px;
 }
 
-/* 添加底部边框效果 */
+/* 底部边框效果 */
 .index-content h2::after {
   content: "";
   position: absolute;
@@ -174,5 +178,5 @@ body {
 }
 
 .index-content h2:hover::after {
-  background-color: #409eff;
+  background-color: rgba(255, 255, 255, 0.4);
 }

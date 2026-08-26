@@ -14,8 +14,26 @@ function showMarkdown(filepath) {
   xmlhttp.onreadystatechange = function () {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
+      var renderer = new marked.Renderer();
+      renderer.code = function (code, infostring) {
+        var lang = (infostring || "").trim().split(/\s+/)[0];
+        var highlighted;
+        if (lang && window.hljs.getLanguage(lang)) {
+          highlighted = window.hljs.highlight(code, { language: lang }).value;
+        } else {
+          highlighted = window.hljs.highlightAuto(code).value;
+        }
+        return (
+          '<pre><code class="hljs language-' +
+          (lang || "") +
+          '">' +
+          highlighted +
+          "</code></pre>"
+        );
+      };
+
       marked.setOptions({
-        renderer: new marked.Renderer(),
+        renderer: renderer,
         gfm: true,
         tables: true,
         breaks: true,
@@ -23,9 +41,6 @@ function showMarkdown(filepath) {
         sanitize: false,
         smartLists: true,
         smartypants: false,
-        highlight: function (code) {
-          return hljs.highlightAuto(code).value;
-        }
       });
 
       html = marked.marked(xmlhttp.responseText);

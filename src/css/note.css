@@ -7,6 +7,16 @@
   background: #fff;
 }
 
+/* 目录 tab 悬浮/选中色调，与快速导航页（#6b7a8c）保持一致 */
+.note-index .el-tabs__item:hover,
+.note-index .el-tabs__item.is-active {
+  color: #6b7a8c;
+}
+
+.note-index .el-tabs__active-bar {
+  background-color: #6b7a8c;
+}
+
 .note-content {
   border-radius: 4px;
   border: 1px solid #EBEEF5;
@@ -14,4 +24,3 @@
   margin: 8px 0px 0px 0px;
   min-height: 600px;
 }
-
