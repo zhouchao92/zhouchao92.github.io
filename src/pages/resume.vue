@@ -78,10 +78,14 @@
               </ul>
             </div>
 
-            <p>
-              <el-tag type="success" size="small">工作成果</el-tag>
-            </p>
-            <p>{{resume.achievement}}</p>
+            <div>
+              <p>
+                <el-tag type="success" size="small">工作成果</el-tag>
+              </p>
+              <ul class="sub-indent-30">
+                <li v-for="content in resume.achievement" :key="content">{{content}}</li>
+              </ul>
+            </div>
           </el-card>
         </el-timeline-item>
       </el-timeline>
