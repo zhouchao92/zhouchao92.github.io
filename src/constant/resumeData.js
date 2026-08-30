@@ -59,9 +59,9 @@ const ccssoftProjects = [
 		projectName: "云网变更操作管理系统",
 		projectDesc: "基于若依开源框架的芋道前后端系统为基座，用于电信云网变更操作方案的发起、提级、审批、上报集团等全流程管控",
 		projectDuty: [
-			"完成变更管理系统数字员工EOP接口开发，告警屏蔽校验、执行与终止功能开发，重保场景接收与校验业务开发",
+			"完成变更管理系统数字员工 EOP 接口开发，告警屏蔽校验、执行与终止功能开发，重保场景接收与校验业务开发",
 			"迁移变更规则池、重点关注池、光缆割接等业务模块，实现基于 Flowable 框架的光缆割接冲突判定流程",
-			"系统 jvm 参数调优，排查容器探活自动重启异常，支撑系统版本迭代，协助解决线上生产问题"
+			"系统 JVM 参数调优，排查容器探活自动重启异常，支撑系统版本迭代，协助解决线上生产问题"
 		],
 		technology: [
 			"Spring Boot", "MyBatisPlus", "PostgreSQL", "Redis", "Kafka", "XXL-JOB", "Flowable"
@@ -165,7 +165,7 @@ const specialTalent = [
 		percentage: 50, status: 'warning', text: '熟悉常用的设计模式，如单例、工厂、策略、代理、适配器等设计模式，具有实际的项目应用经验',
 	},
 	{
-		percentage: 50, status: 'warning', text: '了解 RAG、MCP、AI Agent 智能体等主流 AI 技术，熟练应用 AI 辅助编程',
+		percentage: 25, status: 'warning', text: '了解 RAG、MCP、Skill、AI Agent 智能体等主流 AI 技术，熟练应用 AI 辅助编程',
 	},
 ];
 
