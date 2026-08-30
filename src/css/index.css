@@ -120,7 +120,7 @@ body {
   opacity: 1;
 }  */
 
-/* 索引页目录项，色调与快速导航页（--nav-accent: #6b7a8c）保持一致 */
+/* 索引页目录项，色调与收藏夹页（--nav-accent: #6b7a8c）保持一致 */
 .index-content h2 {
   cursor: pointer;
   transition: all 0.25s ease;
@@ -132,7 +132,7 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
-/* 悬停效果：与快速导航链接 hover 一致 */
+/* 悬停效果：与收藏夹链接 hover 一致 */
 .index-content h2:hover {
   background-color: #6b7a8c;
   color: #fff;

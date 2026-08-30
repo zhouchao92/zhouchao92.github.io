@@ -8,14 +8,14 @@
 <script>
 module.exports = {
   metaInfo: {
-    title: "周超 | 快速导航",
+    title: "周超 | 收藏夹",
   },
   components: {
     markdownhtml: httpVueLoader("/src/components/markdownHtml.vue"),
   },
   data() {
     return {
-      markdownPath: "/static/doc/快速导航.md",
+      markdownPath: "/static/doc/收藏夹.md",
     };
   },
   methods: {
