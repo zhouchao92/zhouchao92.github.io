@@ -2,8 +2,9 @@
 周超
 :::
 ::: center
-icon:phone 13409890272 icon:email 1178605721@qq.com
-icon:info 1998年08月 icon:blog 湖北省黄冈市 icon:fa-paper-plane Java开发工程师
+电话：13409890272&nbsp;&nbsp;&nbsp;&nbsp;邮箱：1178605721@qq.com
+
+出生年月：1998年08月&nbsp;&nbsp;&nbsp;&nbsp;籍贯：湖北省黄冈市&nbsp;&nbsp;&nbsp;&nbsp;求职意向：Java开发工程师
 :::
 专业技能
 熟练掌握 Java 集合、反射、并发、IO、多线程等技术
