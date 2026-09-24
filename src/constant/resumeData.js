@@ -165,7 +165,7 @@ const specialTalent = [
 		percentage: 50, status: 'warning', text: '熟悉常用的设计模式，如单例、工厂、策略、代理、适配器等设计模式，具有实际的项目应用经验',
 	},
 	{
-		percentage: 25, status: 'warning', text: '了解 RAG、MCP、Skill、AI Agent 智能体等主流 AI 技术，熟练应用 AI 辅助编程',
+		percentage: 25, status: 'exception', text: '了解 RAG、MCP、Skill、AI Agent 智能体等主流 AI 技术，熟练应用 AI 辅助编程',
 	},
 ];
 
