@@ -1,5 +1,4 @@
 const workTime = Math.round((new Date() - new Date("2020-12-01")) / 1000 / 60 / 60 / 24 / 365);
-const realWorkTime = Math.round((new Date() - new Date("2021-07-01")) / 1000 / 60 / 60 / 24 / 365);
 const personInfo = {
 	name: "周超",
 	phoneNumber: "13409890272",
@@ -20,14 +19,14 @@ const personInfo = {
 };
 
 const ccssoftResume = {
-	timestamp: "2023/04/24 - 至今",
-	company: "中通服软件科技有限公司（武汉）/ 胜通和",
+	timestamp: "2023/04/24 - 2026/08/31",
+	company: "中通服软件科技有限公司 / 胜通和",
 	position: "Java开发工程师",
 	business: "基于云网实时告警及性能数据，结合资源、业务与客户信息，提供面向全云网及业务的告警处理、跨域关联、故障定位及影响分析、故障预处理、故障预测、业务端到端告警监控和故障自动派单能力",
 	jobContent: [
 		"基于 Kettle 实现华为/中兴/烽火/华思等多厂商网元设备、端口、板卡信息的自动化采集与解析，覆盖千万条网元数据",
 		"基于 Nacos 动态配置实现 Kafka/RocketMQ 日均 1000 万+ 告警消息实时转发，提升告警处理时效性",
-		"独立完成告警业务流程编排场景设计，实现告警关联与派单等核心业务需求",
+		"独立完成告警业务流程编排场景设计，实现告警采集、关联与派单等核心业务需求",
 		"解决系统安全漏洞、生产环境 BUG 排查与系统性能调优，完成项目版本迭代与功能验证，管理 Git 省内分支源代码"
 	],
 	achievement: [
@@ -42,7 +41,7 @@ const ccssoftResume = {
 const ccssoftProjects = [
 	{
 		timestamp: ccssoftResume.timestamp,
-		projectName: "运保告警子中心系统",
+		projectName: "运营保障中心-告警子中心系统",
 		projectDesc: "系统基于采集器程序从华为、中兴、烽火、天元等网管处获取网元设备或动环设备的告警信息，将采集的告警统一格式后存储到 MQ，先经过 Flink 程序对告警数据进行标准化、割接等规则匹配，对其进行打标，再对数据进行预处理，符合派单条件的调用第三方综调系统生成工单，送至运营岗位处理",
 		projectDuty: [
 			"优化 Flink 告警数据流处理算子，系统吞吐量提升至 70+ TPS，日均处理 600 万+ 原始告警消息",
@@ -71,7 +70,7 @@ const ccssoftProjects = [
 
 const enbrandsResume = {
 	timestamp: "2022/03/17 - 2022/09/05",
-	company: "深圳市云积分科技有限公司（武汉） ",
+	company: "深圳市云积分科技有限公司",
 	position: "Java开发工程师",
 	business: "各大电商平台（天猫、京东、唯品会、抖音）与品牌 CRM 会员通对接，实现双方系统的会员积分、等级、订单数据以及商品数据打通，维护商家后台管理系统和小程序的会员相关接口，为商家提供定制化的互动玩法",
 	jobContent: [
@@ -165,11 +164,11 @@ const specialTalent = [
 		percentage: 50, status: 'warning', text: '熟悉常用的设计模式，如单例、工厂、策略、代理、适配器等设计模式，具有实际的项目应用经验',
 	},
 	{
-		percentage: 25, status: 'exception', text: '了解 RAG、MCP、Skill、AI Agent 智能体等主流 AI 技术，熟练应用 AI 辅助编程',
+		percentage: 50, status: 'exception', text: '熟悉 RAG、MCP、Prompt、Skill、AI Agent 等主流 AI 技术，熟练应用 AI 工具辅助编程',
 	},
 ];
 
-const summary = realWorkTime + " 年 Java 开发经验，熟悉分布式系统设计与高并发场景优化，有系统去 O 化与信创改造落地经验。具备微服务架构设计、消息中间件集成以及生产问题排查能力。熟悉医疗 SaaS、电商会员通和运营保障等业务领域，具备端到端项目交付与团队协作能力";
+const summary = "5 年 Java 开发经验，熟悉分布式系统设计与高并发场景优化，有系统去 O 化与信创改造落地经验。具备微服务架构设计、消息中间件集成以及生产问题排查能力。熟悉医疗 SaaS、电商会员通和运营保障等业务领域，具备端到端项目交付与团队协作能力";
 
 const resumes = [ccssoftResume, enbrandsResume, ktccResume];
 
