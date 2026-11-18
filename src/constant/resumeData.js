@@ -1,4 +1,4 @@
-const workTime = Math.round((new Date() - new Date("2020-12-01")) / 1000 / 60 / 60 / 24 / 365);
+const workTime = Math.round((new Date() - new Date("2021-07-01")) / 1000 / 60 / 60 / 24 / 365);
 const personInfo = {
 	name: "周超",
 	phoneNumber: "13409890272",
